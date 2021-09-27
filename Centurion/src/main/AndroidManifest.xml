@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Centurion">
-        <activity android:name="zachary.symons.home.control.centurion.MainActivity">
+        <activity android:name="home.control.centurion.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

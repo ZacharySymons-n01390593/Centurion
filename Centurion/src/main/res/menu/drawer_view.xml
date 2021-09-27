@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="192dp"
-    android:background="?attr/colorPrimaryDark"
-    android:padding="16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:orientation="vertical"
-    android:gravity="bottom">
+<!--Zachary Symons n01390593-->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="My header title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_lock"
+            android:icon="@drawable/lock"
+            android:title="@string/lock" />
+        <item
+            android:id="@+id/nav_thermostat"
+            android:icon="@drawable/lock"
+            android:title="@string/thermostat" />
 
-</LinearLayout>
+    </group>
+</menu>

@@ -7,11 +7,20 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
+
+import android.content.DialogInterface;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.FragmentTransaction;
+
+import zachary.symons.centurion.Lock.LockFrag;
+import zachary.symons.centurion.Thermostat.ThermostatFrag;
+import zachary.symons.centurion.ui.main.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,8 +31,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        loadFragment(new MainFragment());
+
+//        Toolbar toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
@@ -47,6 +58,30 @@ public class MainActivity extends AppCompatActivity {
                         //display in short period of time
                         Toast.makeText(getApplicationContext(), menuItem.getTitle(),
                                 Toast.LENGTH_LONG).show();
+                        // Launch the corresponding fragment
+                        Fragment fragment = null;
+                        Class fragmentClass = null;
+                        switch (menuItem.getItemId()) {
+                            case R.id.nav_main:
+                                fragmentClass = MainFragment.class;
+                                break;
+                            case R.id.nav_lock:
+                                fragmentClass = LockFrag.class;
+                                break;
+                            case R.id.nav_thermostat:
+                                fragmentClass = ThermostatFrag.class;
+                                break;
+                        }
+
+                        try {
+                            fragment = (Fragment) fragmentClass.newInstance();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        // Insert the fragment by replacing any existing fragment
+                        loadFragment(fragment);
+
 
                         return true;
                     }
@@ -87,5 +122,26 @@ public class MainActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void loadFragment(Fragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.flContent, fragment);
+        transaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.btn_star)
+                .setTitle("Zachary Symons n01390593")
+                .setMessage("Are you sure you want to close this close app?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 }

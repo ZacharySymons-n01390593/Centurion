@@ -26,14 +26,11 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.main_fragment, container, false);
+        View root = inflater.inflate(R.layout.main_fragment, container, false);
+
+        return root;
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        // TODO: Use the ViewModel
-    }
+
 
 }

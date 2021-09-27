@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "zachary.symons.centurion"
+        applicationId "home.control.centurion"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

@@ -1,4 +1,4 @@
-package zachary.symons.centurion;
+package home.control.centurion;
 
 import org.junit.Test;
 

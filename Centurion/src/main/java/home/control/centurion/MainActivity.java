@@ -1,5 +1,5 @@
 //Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690)
-package zachary.symons.centurion;
+package home.control.centurion;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -19,9 +19,9 @@ import android.content.DialogInterface;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.FragmentTransaction;
 
-import zachary.symons.centurion.Lock.LockFrag;
-import zachary.symons.centurion.Thermostat.ThermostatFrag;
-import zachary.symons.centurion.ui.main.MainFragment;
+import home.control.centurion.Lock.LockFrag;
+import home.control.centurion.Thermostat.ThermostatFrag;
+import home.control.centurion.ui.main.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 

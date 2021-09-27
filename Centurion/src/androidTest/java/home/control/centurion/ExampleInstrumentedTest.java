@@ -1,4 +1,4 @@
-package zachary.symons.centurion;
+package home.control.centurion;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("zachary.symons.centurion", appContext.getPackageName());
+        assertEquals("home.control.centurion", appContext.getPackageName());
     }
 }

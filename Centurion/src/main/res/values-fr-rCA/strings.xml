@@ -8,7 +8,7 @@
     <string name="this_would_be_a_lock_screen">ce sera l\'écran de verrouillage</string>
     <string name="hello_blank_fragment">Bonjour fragment vierge</string>
     <string name="back_message">Êtes-vous sûr de vouloir fermer cette application de fermeture ?</string>
-    <string name="eback_exit">Quitter l'application</string>
+    <string name="back_exit">Quitter application</string>
     <string name="back_yes">Oui</string>
     <string name="back_no">Non</string>
 </resources>

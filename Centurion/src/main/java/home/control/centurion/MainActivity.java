@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.btn_star)
-                .setTitle(R.string.eback_exit)
+                .setTitle(R.string.back_exit)
                 .setMessage(R.string.back_message)
                 .setPositiveButton(R.string.back_yes, new DialogInterface.OnClickListener() {
                     @Override

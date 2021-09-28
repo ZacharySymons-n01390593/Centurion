@@ -7,4 +7,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="this_would_be_a_lock_screen">this would be a lock screen</string>
+    <string name="back_message">Are you sure you want to close this close app?</string>
+    <string name="eback_exit">Exit App</string>
+    <string name="back_yes">Yes</string>
+    <string name="back_no">No</string>
 </resources>

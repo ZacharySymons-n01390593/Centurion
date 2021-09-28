@@ -134,15 +134,15 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.btn_star)
-                .setTitle("Zachary Symons n01390593")
-                .setMessage("Are you sure you want to close this close app?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setTitle(R.string.eback_exit)
+                .setMessage(R.string.back_message)
+                .setPositiveButton(R.string.back_yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
                     }
                 })
-                .setNegativeButton("No", null)
+                .setNegativeButton(R.string.back_no, null)
                 .show();
     }
 }

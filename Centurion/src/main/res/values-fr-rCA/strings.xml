@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Centurion</string>
+    <string name="centurion_home_control_system">Système de contrôle domestique Centurion</string>
+    <string name="home">Accueil</string>
+    <string name="thermostat">Thermostat</string>
+    <string name="lock">" La serrure"</string>
+</resources>

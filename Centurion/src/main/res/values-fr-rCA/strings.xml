@@ -5,6 +5,8 @@
     <string name="home">Accueil</string>
     <string name="thermostat">Thermostat</string>
     <string name="lock">" La serrure"</string>
+    <string name="light">Contrôle de la lumière</string>
+    <string name="c02">Moniteur de monoxyde de carbone</string>
     <string name="this_would_be_a_lock_screen">ce sera l\'écran de verrouillage</string>
     <string name="hello_blank_fragment">Bonjour fragment vierge</string>
     <string name="back_message">Êtes-vous sûr de vouloir fermer cette application de fermeture ?</string>

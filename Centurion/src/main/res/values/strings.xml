@@ -13,4 +13,6 @@
     <string name="back_exit">Exit App</string>
     <string name="back_yes">Yes</string>
     <string name="back_no">No</string>
+    <string name="light_control_fragment">Light Control Fragment</string>
+    <string name="carbon_monoxide_fragment">Carbon Monoxide Fragment</string>
 </resources>

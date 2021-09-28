@@ -9,6 +9,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Carbon Monoxide Fragment" />
+        android:background="#848582"
+        android:text="@string/carbon_monoxide_fragment"
+        android:textColor="#000000" />
 
 </FrameLayout>

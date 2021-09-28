@@ -19,6 +19,8 @@ import android.content.DialogInterface;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.FragmentTransaction;
 
+import home.control.centurion.CarbonMonoxide.CarbonMonoxideFrag;
+import home.control.centurion.LightControl.LightControlFrag;
 import home.control.centurion.Lock.LockFrag;
 import home.control.centurion.Thermostat.ThermostatFrag;
 import home.control.centurion.ui.main.MainFragment;
@@ -71,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case R.id.nav_thermostat:
                                 fragmentClass = ThermostatFrag.class;
+                                break;
+                            case R.id.nav_lightcontrol:
+                                fragmentClass = LightControlFrag.class;
+                                break;
+                            case R.id.nav_carbonmonoxide:
+                                fragmentClass = CarbonMonoxideFrag.class;
                                 break;
                         }
 

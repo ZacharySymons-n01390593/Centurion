@@ -15,6 +15,12 @@
             android:id="@+id/nav_thermostat"
             android:icon="@drawable/lock"
             android:title="@string/thermostat" />
+        <item
+            android:id="@+id/nav_light"
+            android:icon="@drawable/lock"
+            android:title="@string/Light" />
+
+
 
     </group>
 </menu>

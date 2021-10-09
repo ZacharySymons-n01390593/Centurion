@@ -19,6 +19,7 @@ import android.content.DialogInterface;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.FragmentTransaction;
 
+import home.control.centurion.Light.LightFrag;
 import home.control.centurion.Lock.LockFrag;
 import home.control.centurion.Thermostat.ThermostatFrag;
 import home.control.centurion.ui.main.MainFragment;
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.nav_thermostat:
                                 fragmentClass = ThermostatFrag.class;
                                 break;
+                            case R.id.nav_light:
+                                fragmentClass = LightFrag.class;
                         }
 
                         try {

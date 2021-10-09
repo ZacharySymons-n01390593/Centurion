@@ -13,14 +13,16 @@
             android:title="@string/lock" />
         <item
             android:id="@+id/nav_thermostat"
-            android:icon="@drawable/lock"
+            android:icon="@drawable/thermostat"
             android:title="@string/thermostat" />
         <item
-            android:id="@+id/nav_light"
-            android:icon="@drawable/lock"
-            android:title="@string/Light" />
-
-
+            android:id="@+id/nav_lightcontrol"
+            android:icon="@drawable/light"
+            android:title="@string/light" />
+        <item
+            android:id="@+id/nav_carbonmonoxide"
+            android:icon="@drawable/carbonmonoxide"
+            android:title="@string/c02" />
 
     </group>
 </menu>

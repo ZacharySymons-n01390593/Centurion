@@ -19,7 +19,8 @@ import android.content.DialogInterface;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.FragmentTransaction;
 
-import home.control.centurion.Light.LightFrag;
+import home.control.centurion.CarbonMonoxide.CarbonMonoxideFrag;
+import home.control.centurion.LightControl.LightControlFrag;
 import home.control.centurion.Lock.LockFrag;
 import home.control.centurion.Thermostat.ThermostatFrag;
 import home.control.centurion.ui.main.MainFragment;
@@ -73,8 +74,12 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.nav_thermostat:
                                 fragmentClass = ThermostatFrag.class;
                                 break;
-                            case R.id.nav_light:
-                                fragmentClass = LightFrag.class;
+                            case R.id.nav_lightcontrol:
+                                fragmentClass = LightControlFrag.class;
+                                break;
+                            case R.id.nav_carbonmonoxide:
+                                fragmentClass = CarbonMonoxideFrag.class;
+                                break;
                         }
 
                         try {
@@ -137,15 +142,15 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.btn_star)
-                .setTitle("Zachary Symons n01390593")
-                .setMessage("Are you sure you want to close this close app?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setTitle(R.string.back_exit)
+                .setMessage(R.string.back_message)
+                .setPositiveButton(R.string.back_yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
                     }
                 })
-                .setNegativeButton("No", null)
+                .setNegativeButton(R.string.back_no, null)
                 .show();
     }
 }

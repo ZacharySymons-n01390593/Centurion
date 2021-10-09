@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Centurion</string>
+    <string name="centurion_home_control_system">Système de contrôle domestique Centurion</string>
+    <string name="home">Accueil</string>
+    <string name="thermostat">Thermostat</string>
+    <string name="lock">" La serrure"</string>
+    <string name="light">Contrôle de la lumière</string>
+    <string name="c02">Moniteur de monoxyde de carbone</string>
+    <string name="this_would_be_a_lock_screen">ce sera l\'écran de verrouillage</string>
+    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
+    <string name="back_message">Êtes-vous sûr de vouloir fermer cette application de fermeture ?</string>
+    <string name="back_exit">Quitter application</string>
+    <string name="back_yes">Oui</string>
+    <string name="back_no">Non</string>
+    <string name="light_control_fragment">contrôle de la lumière Fragment</string>
+    <string name="carbon_monoxide_fragment">monoxyde de carbone Fragment</string>
+</resources>

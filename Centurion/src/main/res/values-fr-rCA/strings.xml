@@ -15,4 +15,7 @@
     <string name="back_no">Non</string>
     <string name="light_control_fragment">contrôle de la lumière Fragment</string>
     <string name="carbon_monoxide_fragment">monoxyde de carbone Fragment</string>
+    <string name="on_off">Au/Désactivé</string>
+    <string name="timer">Timer</string>
+    <string name="light_schedule">Light Schedule</string>
 </resources>

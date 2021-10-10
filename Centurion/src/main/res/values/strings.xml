@@ -13,6 +13,18 @@
     <string name="back_exit">Exit App</string>
     <string name="back_yes">Yes</string>
     <string name="back_no">No</string>
-    <string name="light_control_fragment">Light Control Fragment</string>
+    <string name="light_control_fragment">Light Control</string>
     <string name="carbon_monoxide_fragment">Carbon Monoxide Fragment</string>
+    <string name="on_off">On/Off</string>
+    <string name="timer">Timer</string>
+    <string name="light_schedule">Light Schedule</string>
+
+    <string-array name="timer">
+        <item>5 min</item>
+        <item>10 min</item>
+        <item>15 min</item>
+        <item>30 min</item>
+    </string-array>
+
+
 </resources>

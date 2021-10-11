@@ -20,4 +20,11 @@
     <string name="light_schedule">Light Schedule</string>
     <string name="emergCall">Appel d\'urgence</string>
     <string name="are_you_sure">Êtes-vous sûr de vouloir appeler le 911?</string>
+    <string name="carbon_emergency_button">Contacter services durgence</string>
+    <string name="current_c02_level_txtview">NIVEAU ACTUEL DE MONOXYDE DE CARBONE:</string>
+    <string name="placeholder_carbon">PLACEHOLDER.\nThis will likely be replaced by a textview that imports the sensor readings from the hardware</string>
+    <string name="safe_carbon_txtview">ORDINAIRE</string>
+    <string name="moderate_carbon_txtview">MODÉRER</string>
+    <string name="unhealthy_carbon_txtview">MALSAIN</string>
+    <string name="hazardous_carbon_txtview">HASARDEUX</string>
 </resources>

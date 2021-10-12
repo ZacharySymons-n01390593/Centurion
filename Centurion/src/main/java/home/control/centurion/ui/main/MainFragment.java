@@ -21,7 +21,7 @@ import home.control.centurion.R;
 public class MainFragment extends Fragment {
 
     private MainViewModel mViewModel;
-    int i = 0;
+    static int i = 0;
     int j = 0;
     public static MainFragment newInstance() {
         return new MainFragment();
@@ -49,7 +49,7 @@ public class MainFragment extends Fragment {
 
                             i=1;
 
-                        }else if (i != 0) {
+                        }else if (i == 1) {
                             AppCompatDelegate
                                     .setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                             i=0;

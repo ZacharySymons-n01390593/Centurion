@@ -43,4 +43,6 @@
     <string name="clock_icon">" Icône de l'horloge"</string>
     <string name="light_bulb">Ampoule</string>
     <string name="toggle_dark_light_mode">" Basculer entre le mode sombre/clair"</string>
+    <string name="lock_state">Lock State:</string>
+    <string name="locked">Locked</string>
 </resources>

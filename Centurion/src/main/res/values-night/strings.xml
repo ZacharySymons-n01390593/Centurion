@@ -13,4 +13,6 @@
     <string name="recent_activity">Recent Activity:</string>
     <string name="settingsMenu">settings</string>
     <string name="aboutMenu">about</string>
+    <string name="lock_state">Lock State:</string>
+    <string name="locked">Locked</string>
 </resources>

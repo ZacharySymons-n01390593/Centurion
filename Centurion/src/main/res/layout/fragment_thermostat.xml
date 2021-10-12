@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/roomtemp">
 
         <ImageView
             android:id="@+id/imageView3"
@@ -24,26 +25,51 @@
 
         <SeekBar
             android:id="@+id/seekBar2"
-            android:layout_width="265dp"
-            android:layout_height="58dp"
+            android:layout_width="293dp"
+            android:layout_height="67dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.424"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.696" />
+            app:layout_constraintVertical_bias="0.81" />
 
         <TextView
             android:id="@+id/TemperatureReading"
-            android:layout_width="48dp"
-            android:layout_height="26dp"
+            android:layout_width="90dp"
+            android:layout_height="49dp"
             android:text="0.00 C"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintHorizontal_bias="0.183"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.593" />
+            app:layout_constraintVertical_bias="0.524" />
+
+        <TextView
+            android:id="@+id/HumidityReading"
+            android:layout_width="43dp"
+            android:layout_height="48dp"
+            android:text="0%"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.717"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.524" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="161dp"
+            android:layout_height="256dp"
+            android:src="@drawable/humidity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.212" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

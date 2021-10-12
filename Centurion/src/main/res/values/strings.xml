@@ -53,6 +53,8 @@
     </string-array>
     <string name="lockBTN">Lock</string>
     <string name="toggle_portrait_lock">Toggle Portrait Lock</string>
+    <string name="lock_state">Lock State:</string>
+    <string name="locked">Locked</string>
 
 
 </resources>

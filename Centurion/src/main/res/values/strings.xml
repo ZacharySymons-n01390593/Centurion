@@ -38,6 +38,11 @@
     <string name="activity_log">Activity Log</string>
     <string name="settingsMenu">settings</string>
     <string name="aboutMenu">about</string>
+    <string name="end_time">End Time</string>
+    <string name="start_time">Start Time</string>
+    <string name="clock_icon">Clock Icon</string>
+    <string name="light_bulb">Light Bulb</string>
+    <string name="toggle_dark_light_mode">Toggle Dark/Light Mode</string>
 
 
     <string-array name="timer">
@@ -46,6 +51,8 @@
         <item>15 min</item>
         <item>30 min</item>
     </string-array>
+    <string name="lockBTN">Lock</string>
+    <string name="toggle_portrait_lock">Toggle Portrait Lock</string>
 
 
 </resources>

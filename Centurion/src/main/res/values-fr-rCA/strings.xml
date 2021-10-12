@@ -28,11 +28,19 @@
     <string name="moderate_carbon_txtview">MODÉRER</string>
     <string name="unhealthy_carbon_txtview">MALSAIN</string>
     <string name="hazardous_carbon_txtview">HASARDEUX</string>
-    <string name="lockBTN">Lock</string>
+    <string name="lockBTN">" Fermer à clé"</string>
     <string name="lock_control">Lock Control</string>
     <string name="latest_activity">"Recent Activity: "</string>
     <string name="SampleTime">October 12th 02:29</string>
     <string name="recent_activity">Recent Activity:</string>
     <string name="settingsMenu">settings</string>
     <string name="aboutMenu">about</string>
+    <string name="light_control">" Contrôle de la lumière"</string>
+    <string name="helpmenu">aider</string>
+    <string name="activity_log">" Journal d'activité"</string>
+    <string name="end_time">" Heure de fin"</string>
+    <string name="start_time">" Heure de début"</string>
+    <string name="clock_icon">" Icône de l'horloge"</string>
+    <string name="light_bulb">Ampoule</string>
+    <string name="toggle_dark_light_mode">" Basculer entre le mode sombre/clair"</string>
 </resources>

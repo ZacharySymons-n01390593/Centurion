@@ -8,4 +8,9 @@
     <string name="unhealthy_carbon_txtview">UNHEALTHY</string>
     <string name="hazardous_carbon_txtview">HAZARDOUS</string>
     <string name="lockBTN">Lock</string>
+    <string name="lock_control">Lock Control</string>
+    <string name="latest_activity">"Recent Activity: "</string>
+    <string name="recent_activity">Recent Activity:</string>
+    <string name="settingsMenu">settings</string>
+    <string name="aboutMenu">about</string>
 </resources>

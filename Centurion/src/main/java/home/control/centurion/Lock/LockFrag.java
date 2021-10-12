@@ -18,7 +18,6 @@ import home.control.centurion.R;
 
 public class LockFrag extends Fragment {
 
-    int color = Color.parseColor("@color/green");
 
 
     public LockFrag() {
@@ -31,15 +30,16 @@ public class LockFrag extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_lock, container, false);
         ImageButton lockBTN = root.findViewById(R.id.lockBTN);
-        lockBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (lockBTN.isEnabled()){
-                    lockBTN.setColorFilter(color);
-                }
-                lockTheDoor();
-            }
-        });
+//        lockBTN.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (lockBTN.isEnabled()){
+//                    lockBTN.setColorFilter(color);
+//                }
+//                lockTheDoor();
+//            }
+//        });
+
 
         return root;
     }

@@ -28,4 +28,10 @@
     <string name="unhealthy_carbon_txtview">MALSAIN</string>
     <string name="hazardous_carbon_txtview">HASARDEUX</string>
     <string name="lockBTN">Lock</string>
+    <string name="lock_control">Lock Control</string>
+    <string name="latest_activity">"Recent Activity: "</string>
+    <string name="SampleTime">October 12th 02:29</string>
+    <string name="recent_activity">Recent Activity:</string>
+    <string name="settingsMenu">settings</string>
+    <string name="aboutMenu">about</string>
 </resources>

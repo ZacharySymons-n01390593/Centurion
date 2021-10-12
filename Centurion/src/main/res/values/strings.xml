@@ -3,7 +3,7 @@
 <resources>
     <string name="app_name">Centurion</string>
     <string name="centurion_home_control_system">Centurion Home Control System</string>
-    <string name="home">Home</string>
+    <string name="settings">Settings</string>
     <string name="thermostat">Thermostat</string>
     <string name="light">Light Control</string>
     <string name="c02">C02 Monitor</string>

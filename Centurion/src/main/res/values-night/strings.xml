@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--    Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690)-->
 <resources>
     <string name="carbon_emergency_button">Contact EMS</string>
     <string name="current_c02_level_txtview">CURRENT C02 LEVEL:</string>
@@ -7,7 +8,6 @@
     <string name="moderate_carbon_txtview">MODERATE</string>
     <string name="unhealthy_carbon_txtview">UNHEALTHY</string>
     <string name="hazardous_carbon_txtview">HAZARDOUS</string>
-    <string name="lockBTN">Lock</string>
     <string name="lock_control">Lock Control</string>
     <string name="latest_activity">"Recent Activity: "</string>
     <string name="recent_activity">Recent Activity:</string>

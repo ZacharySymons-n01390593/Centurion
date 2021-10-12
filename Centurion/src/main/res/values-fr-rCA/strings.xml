@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--    Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690)-->
 <resources>
     <string name="app_name">Centurion</string>
     <string name="centurion_home_control_system">Système de contrôle domestique Centurion</string>

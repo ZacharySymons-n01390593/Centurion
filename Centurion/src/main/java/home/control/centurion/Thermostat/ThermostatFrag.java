@@ -16,6 +16,7 @@ public class ThermostatFrag extends Fragment {
 
 
 
+
     public ThermostatFrag() {
         // Required empty public constructor
     }

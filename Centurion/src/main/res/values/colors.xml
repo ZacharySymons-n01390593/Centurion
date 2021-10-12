@@ -11,5 +11,7 @@
     <color name="gray">#686766</color>
     <color name="red">#FF0000</color>
     <color name="green">#00FF00</color>
-
+    <color name="hottemp">#D7B10606</color>
+    <color name="roomtemp">#F8B3B3</color>
+    <color name="coldtemp">#1EB0F4</color>
 </resources>

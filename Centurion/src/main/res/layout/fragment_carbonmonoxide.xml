@@ -119,7 +119,7 @@
         android:id="@+id/imageView"
         android:layout_width="246dp"
         android:layout_height="205dp"
-        android:src="@drawable/clock"
+        android:src="@drawable/carbontab"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

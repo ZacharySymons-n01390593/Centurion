@@ -15,6 +15,7 @@
         android:id="@+id/lockLogo"
         android:layout_width="233dp"
         android:layout_height="66dp"
+        android:fontFamily="@font/aldrich"
         android:text="@string/lock_control"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -30,6 +31,7 @@
         android:layout_width="171dp"
         android:layout_height="35dp"
         android:text="@string/recent_activity"
+        android:fontFamily="@font/aldrich"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,6 +44,7 @@
     <TextView
         android:layout_width="237dp"
         android:layout_height="65dp"
+        android:fontFamily="@font/aldrich"
         android:text="@string/SampleTime"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,6 +66,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.897" />
+        app:layout_constraintVertical_bias="0.897"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

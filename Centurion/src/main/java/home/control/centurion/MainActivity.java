@@ -1,11 +1,16 @@
 //Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690)
 package home.control.centurion;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -123,16 +128,6 @@ public class MainActivity extends AppCompatActivity {
         );
 
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                mDrawerLayout.openDrawer(GravityCompat.START);
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
     public void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.flContent, fragment);
@@ -153,5 +148,34 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .setNegativeButton(R.string.back_no, null)
                 .show();
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+            case (R.id.ActivityLog):
+                Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://humber.ca"));
+                startActivity(intent1);
+                return true;
+            case (R.id.settings):
+                Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.pizzahut.ca"));
+                startActivity(intent2);
+                return true;
+            case (R.id.help):
+                Intent intent3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=cueulBxn1Fw"));
+                startActivity(intent3);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

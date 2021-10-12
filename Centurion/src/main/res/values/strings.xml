@@ -1,3 +1,5 @@
+<!--Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690)-->
+
 <resources>
     <string name="app_name">Centurion</string>
     <string name="centurion_home_control_system">Centurion Home Control System</string>
@@ -27,6 +29,16 @@
     <string name="moderate_carbon_txtview">MODERATE</string>
     <string name="unhealthy_carbon_txtview">UNHEALTHY</string>
     <string name="hazardous_carbon_txtview">HAZARDOUS</string>
+    <string name="light_control">Light Control</string>
+    <string name="lock_control">Lock Control</string>
+    <string name="latest_activity">"Recent Activity: "</string>
+    <string name="SampleTime">October 12th 02:29</string>
+    <string name="recent_activity">Recent Activity:</string>
+    <string name="helpmenu">help</string>
+    <string name="activity_log">Activity Log</string>
+    <string name="settingsMenu">settings</string>
+    <string name="aboutMenu">about</string>
+
 
     <string-array name="timer">
         <item>5 min</item>

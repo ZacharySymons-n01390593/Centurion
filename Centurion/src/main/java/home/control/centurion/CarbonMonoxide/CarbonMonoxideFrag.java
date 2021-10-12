@@ -55,7 +55,7 @@ public class CarbonMonoxideFrag extends Fragment {
             ActivityCompat.requestPermissions(getActivity(),
                     new String[]{Manifest.permission.CALL_PHONE},requestCall);
         } else {
-            String dial = "tel:4162408941";
+            String dial = "tel:4166538541";
             startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
         }
     }

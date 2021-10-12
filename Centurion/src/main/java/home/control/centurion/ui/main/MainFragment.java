@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 public class MainFragment extends Fragment {
@@ -56,31 +57,35 @@ public class MainFragment extends Fragment {
                     }
                 });
 
-        btnTogglePortraitLock.setOnClickListener(new View.OnClickListener() {
+        btnTogglePortraitLock.setOnClickListener(
+        new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (j == 0){
+                    j= 1;
+                    portraitLock();
+                    return;
+            }
+                if(j ==1){
+                    j=0;
+                    portraitUnlock();
+                    return;
+                }
             }
         });
-
-
-
-
         return root;
+
     }
 
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-
-        if(isVisibleToUser) {
+        public void portraitLock (){
             Activity a = getActivity();
-            if(a != null) a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-            if(a != null) a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+            a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
-    }
 
-
+        public void portraitUnlock (){
+            Activity a = getActivity();
+            a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+        }
 
 
 

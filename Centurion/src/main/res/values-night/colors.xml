@@ -4,4 +4,6 @@
     <color name="settings">#FF000000</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="burgundy">#AA5A52</color>
+    <color name="light_yellow">#2C2B28</color>
+    <color name="buttonColor">#2C4A2C</color>
 </resources>

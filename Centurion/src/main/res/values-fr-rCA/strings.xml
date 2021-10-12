@@ -27,4 +27,5 @@
     <string name="moderate_carbon_txtview">MODÉRER</string>
     <string name="unhealthy_carbon_txtview">MALSAIN</string>
     <string name="hazardous_carbon_txtview">HASARDEUX</string>
+    <string name="lockBTN">Lock</string>
 </resources>

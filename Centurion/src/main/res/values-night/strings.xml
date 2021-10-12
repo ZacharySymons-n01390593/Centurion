@@ -7,4 +7,5 @@
     <string name="moderate_carbon_txtview">MODERATE</string>
     <string name="unhealthy_carbon_txtview">UNHEALTHY</string>
     <string name="hazardous_carbon_txtview">HAZARDOUS</string>
+    <string name="lockBTN">Lock</string>
 </resources>

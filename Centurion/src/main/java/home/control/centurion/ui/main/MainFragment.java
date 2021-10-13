@@ -25,7 +25,7 @@ public class MainFragment extends Fragment {
 
     private MainViewModel mViewModel;
     static int i = 0;
-    int j = 0;
+    static int j = 0;
     public static MainFragment newInstance() {
         return new MainFragment();
     }

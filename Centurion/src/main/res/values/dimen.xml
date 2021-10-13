@@ -7,4 +7,8 @@
     <dimen name="imageheight">160dp</dimen>
     <dimen name="seekbarwidth">300dp</dimen>
     <dimen name="seekbarheight">100dp</dimen>
+    <dimen name="placeholderwidth">250dp</dimen>
+    <dimen name="placeholderheight">100dp</dimen>
+    <dimen name="buttonwidth">220dp</dimen>
+    <dimen name="buttonheight">100dp</dimen>
 </resources>

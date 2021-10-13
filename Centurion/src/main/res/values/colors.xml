@@ -17,5 +17,6 @@
     <color name="burgundy">#CC5858</color>
     <color name="settings">#FFFFFFFF</color>
     <color name="buttonColor">#97F697</color>
+    <color name="taskbar"></color>
 
 </resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "309755496700",
+    "firebase_url": "https://centurion-8c4bc-default-rtdb.firebaseio.com",
+    "project_id": "centurion-8c4bc",
+    "storage_bucket": "centurion-8c4bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309755496700:android:c5999902a134f29333ef79",
+        "android_client_info": {
+          "package_name": "home.control.centurion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309755496700-htdddfujrekil4a89c94tqtef4fmh3t4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgN1QYOJuvZ75a1LwZCKpSu30bt9VKFPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309755496700-htdddfujrekil4a89c94tqtef4fmh3t4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

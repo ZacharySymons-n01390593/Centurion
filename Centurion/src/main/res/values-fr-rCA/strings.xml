@@ -29,12 +29,12 @@
     <string name="unhealthy_carbon_txtview">MALSAIN</string>
     <string name="hazardous_carbon_txtview">HASARDEUX</string>
     <string name="lockBTN">" Fermer à clé"</string>
-    <string name="lock_control">Lock Control</string>
-    <string name="latest_activity">"Recent Activity: "</string>
-    <string name="SampleTime">October 12th 02:29</string>
-    <string name="recent_activity">Recent Activity:</string>
-    <string name="settingsMenu">settings</string>
-    <string name="aboutMenu">about</string>
+    <string name="lock_control">Contrôle de verrouillage</string>
+    <string name="latest_activity">"Activité récente: "</string>
+    <string name="SampleTime">octobre 12th 02:29</string>
+    <string name="recent_activity">Activité récente:</string>
+    <string name="settingsMenu">Les paramètres</string>
+    <string name="aboutMenu">À propos</string>
     <string name="light_control">" Contrôle de la lumière"</string>
     <string name="helpmenu">aider</string>
     <string name="activity_log">" Journal d'activité"</string>
@@ -43,6 +43,6 @@
     <string name="clock_icon">" Icône de l'horloge"</string>
     <string name="light_bulb">Ampoule</string>
     <string name="toggle_dark_light_mode">" Basculer entre le mode sombre/clair"</string>
-    <string name="lock_state">Lock State:</string>
-    <string name="locked">Locked</string>
+    <string name="lock_state">État de verrouillage:</string>
+    <string name="locked">fermé</string>
 </resources>

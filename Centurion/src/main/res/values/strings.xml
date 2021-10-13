@@ -55,6 +55,8 @@
     <string name="toggle_portrait_lock">Toggle Portrait Lock</string>
     <string name="lock_state">Lock State:</string>
     <string name="locked">Locked</string>
+    <string name="humidityreading">0%</string>
+    <string name="temperaturereading">0.00 C</string>
 
 
 </resources>

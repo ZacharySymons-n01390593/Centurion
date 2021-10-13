@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="readings">30sp</dimen>
-    <dimen name="imageheight">30sp</dimen>
-    <dimen name="imagewidth">30sp</dimen>
+    <dimen name="textsize">30sp</dimen>
+    <dimen name="textwidth">90dp</dimen>
+    <dimen name="textheight">60dp</dimen>
+    <dimen name="imagewidth">160dp</dimen>
+    <dimen name="imageheight">160dp</dimen>
+    <dimen name="seekbarwidth">300dp</dimen>
+    <dimen name="seekbarheight">100dp</dimen>
 </resources>

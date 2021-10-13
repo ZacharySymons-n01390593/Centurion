@@ -13,8 +13,8 @@
 
         <ImageView
             android:id="@+id/roomtemp"
-            android:layout_width="137dp"
-            android:layout_height="221dp"
+            android:layout_width="@dimen/imagewidth"
+            android:layout_height="@dimen/imageheight"
             android:src="@drawable/roomtemp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,44 +25,46 @@
 
         <SeekBar
             android:id="@+id/seekBar2"
-            android:layout_width="293dp"
-            android:layout_height="67dp"
+            android:layout_width="@dimen/seekbarwidth"
+            android:layout_height="@dimen/seekbarheight"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.81" />
+            app:layout_constraintVertical_bias="0.731" />
 
         <TextView
             android:id="@+id/TemperatureReading"
-            android:layout_width="90dp"
-            android:layout_height="49dp"
-            android:text="0.00 C"
-            android:textSize="30sp"
+            android:layout_width="@dimen/textwidth"
+            android:layout_height="@dimen/textheight"
+            android:text="@string/temperaturereading"
+            android:textAlignment="center"
+            android:textSize="@dimen/textsize"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.183"
+            app:layout_constraintHorizontal_bias="0.211"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.524" />
+            app:layout_constraintVertical_bias="0.484" />
 
         <TextView
             android:id="@+id/HumidityReading"
-            android:layout_width="43dp"
-            android:layout_height="48dp"
-            android:text="0%"
-            android:textSize="30sp"
+            android:layout_width="@dimen/textwidth"
+            android:layout_height="@dimen/textheight"
+            android:text="@string/humidityreading"
+            android:textAlignment="center"
+            android:textSize="@dimen/textsize"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.717"
+            app:layout_constraintHorizontal_bias="0.763"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.524" />
+            app:layout_constraintVertical_bias="0.484" />
 
         <ImageView
             android:id="@+id/humidity"
-            android:layout_width="161dp"
-            android:layout_height="256dp"
+            android:layout_width="@dimen/imagewidth"
+            android:layout_height="@dimen/imageheight"
             android:src="@drawable/humidity"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

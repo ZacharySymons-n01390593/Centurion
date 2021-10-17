@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/roomtemp">
+        android:background="@color/burgundy">
 
         <ImageView
             android:id="@+id/roomtemp"
@@ -29,9 +29,10 @@
             android:layout_height="@dimen/seekbarheight"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.731" />
+            app:layout_constraintVertical_bias="0.874" />
 
         <TextView
             android:id="@+id/TemperatureReading"
@@ -72,6 +73,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.212" />
+
+        <TextView
+            android:id="@+id/TempHead"
+            android:layout_width="207dp"
+            android:layout_height="96dp"
+            android:text="Temperature Control"
+            android:textAlignment="center"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/FanSpeed"
+            android:layout_width="212dp"
+            android:layout_height="65dp"
+            android:text="Fan Speed"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.813" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

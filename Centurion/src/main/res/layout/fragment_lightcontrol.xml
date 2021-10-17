@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_yellow">
+    android:background="@color/burgundy">
 
 
     <Spinner
@@ -93,7 +93,7 @@
         android:layout_height="88dp"
         android:layout_marginTop="16dp"
         android:adjustViewBounds="true"
-        android:backgroundTint="@color/light_yellow"
+        android:backgroundTint="@color/burgundy"
         android:contentDescription="@string/clock_icon"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="@+id/textView"
@@ -106,7 +106,7 @@
         android:layout_width="81dp"
         android:layout_height="88dp"
         android:adjustViewBounds="true"
-        android:backgroundTint="@color/light_yellow"
+        android:backgroundTint="@color/burgundy"
         android:contentDescription="@string/clock_icon"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="@+id/textView3"

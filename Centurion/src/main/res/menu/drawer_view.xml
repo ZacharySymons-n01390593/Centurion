@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Zachary Symons n01390593-->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <group android:checkableBehavior="single">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/black">
+    <group android:checkableBehavior="single"
+        android:background="@color/black">
         <item
             android:id="@+id/nav_main"
             android:icon="@drawable/ic_menu"
+            android:background="@color/black"
             android:title="@string/settings" />
         <item
             android:id="@+id/nav_lock"
             android:icon="@drawable/lock"
+            android:background="@color/black"
             android:title="@string/lock" />
         <item
             android:id="@+id/nav_thermostat"
             android:icon="@drawable/thermostat"
+            android:background="@color/black"
             android:title="@string/thermostat" />
         <item
             android:id="@+id/nav_lightcontrol"
             android:icon="@drawable/light"
+            android:background="@color/black"
             android:title="@string/light" />
         <item
             android:id="@+id/nav_carbonmonoxide"
             android:icon="@drawable/carbonmonoxide"
+            android:background="@color/black"
             android:title="@string/c02" />
 
     </group>

@@ -23,29 +23,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.123" />
 
-        <SeekBar
-            android:id="@+id/seekBar2"
-            android:layout_width="@dimen/seekbarwidth"
-            android:layout_height="@dimen/seekbarheight"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.901" />
-
         <TextView
             android:id="@+id/TemperatureReading"
             android:layout_width="@dimen/textwidth"
             android:layout_height="@dimen/textheight"
             android:text="@string/temperaturereading"
-            android:textSize="@dimen/textsize"
             android:textAlignment="center"
+            android:textSize="@dimen/textsize"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.297"
+            app:layout_constraintHorizontal_bias="0.301"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.687" />
+            app:layout_constraintVertical_bias="0.626" />
 
         <TextView
             android:id="@+id/HumidityReading"
@@ -59,7 +49,7 @@
             app:layout_constraintHorizontal_bias="0.703"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.688" />
+            app:layout_constraintVertical_bias="0.626" />
 
         <ImageView
             android:id="@+id/humidity"

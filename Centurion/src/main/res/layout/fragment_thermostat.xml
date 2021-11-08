@@ -23,16 +23,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.203" />
 
-        <SeekBar
-            android:id="@+id/seekBar2"
-            android:layout_width="@dimen/seekbarwidth"
-            android:layout_height="@dimen/seekbarheight"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.731" />
-
         <TextView
             android:id="@+id/TemperatureReading"
             android:layout_width="@dimen/textwidth"

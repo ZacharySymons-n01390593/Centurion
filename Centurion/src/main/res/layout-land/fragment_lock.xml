@@ -6,8 +6,8 @@
     style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
-    android:backgroundTint="@color/gray"
+    android:background="@color/burgundy"
+    android:backgroundTint="@color/burgundy"
     tools:context=".CarbonMonoxide.CarbonMonoxideFrag">
 
 
@@ -33,9 +33,9 @@
         android:layout_height="35dp"
         android:fontFamily="@font/aldrich"
         android:text="@string/recent_activity"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="14sp"
-        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.932"
@@ -49,8 +49,8 @@
         android:layout_height="65dp"
         android:fontFamily="@font/aldrich"
         android:text="@string/SampleTime"
-        android:textSize="18sp"
         android:textAlignment="center"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.985"

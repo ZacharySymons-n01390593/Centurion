@@ -30,13 +30,6 @@ public class LightControlFrag extends Fragment {
         View root = inflater.inflate(R.layout.fragment_lightcontrol, container, false);
 
 
-        Spinner mySpinner =  (Spinner) root.findViewById(R.id.spinner);
-
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(getContext()
-                ,android.R.layout.simple_list_item_1
-                ,getResources().getStringArray(R.array.timer));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mySpinner.setAdapter(myAdapter);
 
         return root;
     }

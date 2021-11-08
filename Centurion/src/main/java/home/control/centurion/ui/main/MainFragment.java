@@ -36,7 +36,7 @@ public class MainFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.main_fragment, container, false);
         Button btnToggleDark = root.findViewById(R.id.btnDarkModeToggle);
-        Button btnTogglePortraitLock = root.findViewById(R.id.btnTooglePortraitLock);
+
 
 
 
@@ -62,35 +62,11 @@ public class MainFragment extends Fragment {
                     }
                 });
 
-        btnTogglePortraitLock.setOnClickListener(
-        new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (j == 0){
-                    j= 1;
-                    portraitLock();
-                    return;
-            }
-                if(j ==1){
-                    j=0;
-                    portraitUnlock();
-                    return;
-                }
-            }
-        });
+
         return root;
 
     }
 
-        public void portraitLock (){
-            Activity a = getActivity();
-            a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
-
-        public void portraitUnlock (){
-            Activity a = getActivity();
-            a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
-        }
 
 
 

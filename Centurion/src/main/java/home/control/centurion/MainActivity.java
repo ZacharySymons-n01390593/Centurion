@@ -30,6 +30,7 @@ import home.control.centurion.CarbonMonoxide.CarbonMonoxideFrag;
 import home.control.centurion.LightControl.LightControlFrag;
 import home.control.centurion.Lock.LockFrag;
 import home.control.centurion.Thermostat.ThermostatFrag;
+import home.control.centurion.ui.main.FeedbackFrag;
 import home.control.centurion.ui.main.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -165,6 +166,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Fragment fragment = null;
+        Class fragmentClass = null;
         switch (item.getItemId()){
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
@@ -180,6 +183,18 @@ public class MainActivity extends AppCompatActivity {
             case (R.id.help):
                 Intent intent3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=cueulBxn1Fw"));
                 startActivity(intent3);
+                return true;
+            case (R.id.feedback):
+                fragmentClass = FeedbackFrag.class;
+
+                try {
+                    fragment = (Fragment) fragmentClass.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                // Insert the fragment by replacing any existing fragment
+                loadFragment(fragment);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

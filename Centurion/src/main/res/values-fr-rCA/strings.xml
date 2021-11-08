@@ -45,4 +45,5 @@
     <string name="toggle_dark_light_mode">" Basculer entre le mode sombre/clair"</string>
     <string name="lock_state">État de verrouillage:</string>
     <string name="locked">fermé</string>
+    <string name="feedback">Feedback</string>
 </resources>

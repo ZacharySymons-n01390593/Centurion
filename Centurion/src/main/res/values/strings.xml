@@ -58,6 +58,8 @@
     <string name="locked">Locked</string>
     <string name="humidityreading">0%</string>
     <string name="temperaturereading">0.00 C</string>
+    <string name="randomNumber">1122969682</string>
+    <string name="feedback">Feedback</string>
 
 
 </resources>

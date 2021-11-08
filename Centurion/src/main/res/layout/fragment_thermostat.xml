@@ -11,17 +11,32 @@
         android:layout_height="match_parent"
         android:background="@color/roomtemp">
 
+        <TextView
+            android:id="@+id/fantext2"
+            android:layout_width="212dp"
+            android:layout_height="65dp"
+            android:text="Fan Switch"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.648" />
+
         <ImageView
             android:id="@+id/roomtemp"
-            android:layout_width="@dimen/imagewidth"
-            android:layout_height="@dimen/imageheight"
+            android:layout_width="156dp"
+            android:layout_height="177dp"
             android:src="@drawable/roomtemp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintHorizontal_bias="0.063"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.203" />
+            app:layout_constraintVertical_bias="0.234" />
 
         <TextView
             android:id="@+id/TemperatureReading"
@@ -32,10 +47,10 @@
             android:textSize="@dimen/textsize"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.211"
+            app:layout_constraintHorizontal_bias="0.146"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.484" />
+            app:layout_constraintVertical_bias="0.499" />
 
         <TextView
             android:id="@+id/HumidityReading"
@@ -46,22 +61,35 @@
             android:textSize="@dimen/textsize"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.763"
+            app:layout_constraintHorizontal_bias="0.816"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.484" />
+            app:layout_constraintVertical_bias="0.499" />
 
         <ImageView
             android:id="@+id/humidity"
-            android:layout_width="@dimen/imagewidth"
-            android:layout_height="@dimen/imageheight"
+            android:layout_width="151dp"
+            android:layout_height="175dp"
             android:src="@drawable/humidity"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintHorizontal_bias="0.861"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.212" />
+            app:layout_constraintVertical_bias="0.233" />
+
+        <Switch
+            android:id="@+id/fanSwitch"
+            android:layout_width="100dp"
+            android:layout_height="63dp"
+            android:text="@string/on_off"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.77" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

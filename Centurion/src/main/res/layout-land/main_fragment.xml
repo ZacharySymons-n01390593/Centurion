@@ -9,20 +9,6 @@
     tools:context=".ui.main.MainFragment">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnTooglePortraitLock"
-        android:layout_width="234dp"
-        android:layout_height="72dp"
-        android:background="@color/black"
-        android:text="@string/toggle_portrait_lock"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.607" />
-
-    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnTooglePortraitLock2"
         android:layout_width="234dp"
         android:layout_height="72dp"

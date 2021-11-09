@@ -14,13 +14,41 @@
         android:layout_height="119dp"
         android:background="@color/black"
         android:text="@string/change_taskbar_colour"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
-        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.397" />
+        app:layout_constraintVertical_bias="0.439" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTooglePortraitLock"
+        android:layout_width="248dp"
+        android:layout_height="119dp"
+        android:background="@color/black"
+        android:text="something different"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnChangeAppTheme"
+        android:layout_width="248dp"
+        android:layout_height="119dp"
+        android:background="@color/black"
+        android:text="@string/change_app_theme"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.223" />
 
     <TextView
         android:id="@+id/message"

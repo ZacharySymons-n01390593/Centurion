@@ -64,6 +64,9 @@
     <string name="how_would_you_rate_our_app">How would you rate our app?</string>
     <string name="your_rating">Your Rating:</string>
     <string name="change_app_theme">change app theme</string>
+    <string name="enter_name">Enter your name: </string>
+    <string name="project_name">Centurion Home Control System</string>
+    <string name="team_name">Centurion</string>
 
 
 </resources>

@@ -35,33 +35,7 @@ public class MainFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.main_fragment, container, false);
-        Button btnToggleDark = root.findViewById(R.id.btnDarkModeToggle);
 
-
-
-
-
-        btnToggleDark.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-                        if (i == 0) {
-                            AppCompatDelegate
-                                    .setDefaultNightMode(
-                                            AppCompatDelegate
-                                                    .MODE_NIGHT_YES);
-
-                            i=1;
-
-                        } else if (i == 1) {
-                            AppCompatDelegate
-                                    .setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                            i=0;
-
-                        }
-                    }
-                });
 
 
         return root;

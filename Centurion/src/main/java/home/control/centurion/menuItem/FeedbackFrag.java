@@ -1,4 +1,4 @@
-package home.control.centurion.ui.main;
+package home.control.centurion.menuItem;
 
 import android.os.Bundle;
 
@@ -7,15 +7,25 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 import home.control.centurion.R;
 
 
 public class FeedbackFrag extends Fragment {
 
-
+    TextView ratingNum, showRating;
+    EditText name, phoneNum, email, comment;
+    Button submit;
+    RatingBar ratingBar;
+    float rateValue;
+    String temp;
     public FeedbackFrag() {
         // Required empty public constructor
+
     }
 
 
@@ -24,6 +34,13 @@ public class FeedbackFrag extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_feedback, container, false);
+
+
+        ratingNum = root.findViewById(R.id.rateNumber);
+        ratingBar = root.findViewById(R.id.ratingBar);
+        name = root.findViewById(R.id.name);
+
+
 
         return root;
     }

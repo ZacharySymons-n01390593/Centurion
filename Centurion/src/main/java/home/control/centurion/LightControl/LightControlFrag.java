@@ -12,7 +12,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Switch;
 
 import java.io.IOException;
@@ -45,13 +47,16 @@ URL ImageUrl;
 
         imageView = (ImageView) root.findViewById(R.id.imageView2);
 
+        Spinner mySpinner = (Spinner) root.findViewById(R.id.spinner);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.timerArray, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    mySpinner.setAdapter(adapter);
 
         switchOn_Off = (Switch) root.findViewById(R.id.switchLight);
         switchOn_Off.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 On_Off();
-
             }
         });
 

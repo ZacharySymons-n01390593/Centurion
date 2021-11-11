@@ -4,7 +4,6 @@ package home.control.centurion;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -30,7 +29,7 @@ import home.control.centurion.CarbonMonoxide.CarbonMonoxideFrag;
 import home.control.centurion.LightControl.LightControlFrag;
 import home.control.centurion.Lock.LockFrag;
 import home.control.centurion.Thermostat.ThermostatFrag;
-import home.control.centurion.ui.main.FeedbackFrag;
+import home.control.centurion.menuItem.FeedbackFrag;
 import home.control.centurion.ui.main.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -185,16 +184,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent3);
                 return true;
             case (R.id.feedback):
-                fragmentClass = FeedbackFrag.class;
-
-                try {
-                    fragment = (Fragment) fragmentClass.newInstance();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                // Insert the fragment by replacing any existing fragment
-                loadFragment(fragment);
+                loadFragment(new FeedbackFrag());
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

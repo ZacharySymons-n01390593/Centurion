@@ -79,11 +79,7 @@ URL ImageUrl;
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            p = new ProgressDialog(getActivity());
-            p.setMessage("Please wait for download");
-            p.setIndeterminate(false);
-            p.setCancelable(false);
-            p.show();
+
         }
 
         @Override
@@ -113,10 +109,9 @@ URL ImageUrl;
         protected void onPostExecute(Bitmap bitmap) {
             super.onPostExecute(bitmap);
             if (imageView != null) {
-                p.hide();
                 imageView.setImageBitmap(bitmap);
             } else {
-                p.show();
+
             }
         }
     }

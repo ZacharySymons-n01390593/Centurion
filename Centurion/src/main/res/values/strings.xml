@@ -19,7 +19,7 @@
     <string name="carbon_monoxide_fragment">Carbon Monoxide Fragment</string>
     <string name="on_off">On/Off</string>
     <string name="timer">Timer</string>
-    <string name="light_schedule">Light Schedule</string>
+    <string name="light_schedule">Active Hours</string>
     <string name="are_you_sure">Are you sure you want to call 911?</string>
     <string name="emergCall">Emergency Call</string>
     <string name="carbon_emergency_button">Contact EMS</string>

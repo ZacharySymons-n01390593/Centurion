@@ -28,7 +28,7 @@ public class SettingsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.main_fragment, container, false);
+        View root = inflater.inflate(R.layout.fragment_settings, container, false);
         Button btnToggleDark = root.findViewById(R.id.btnDarkModeToggle);
 
 

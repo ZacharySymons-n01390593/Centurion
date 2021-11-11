@@ -72,6 +72,10 @@
     <string name="good">GOOD </string>
     <string name="great">GREAT </string>
     <string name="amazing">AMAZING </string>
+    <string name="ratingText">Your Rating: \n</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_any_comments_you_have">Enter any comments you have</string>
 
 
 </resources>

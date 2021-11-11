@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import home.control.centurion.R;
 
 
@@ -39,7 +42,11 @@ public class FeedbackFrag extends Fragment {
         ratingNum = root.findViewById(R.id.rateNumber);
         ratingBar = root.findViewById(R.id.ratingBar);
         name = root.findViewById(R.id.name);
+        email = root.findViewById(R.id.email);
+        phoneNum = root.findViewById(R.id.phoneNumber);
+        comment = root.findViewById(R.id.comment);
         submit = root.findViewById(R.id.submit);
+
 
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
@@ -64,11 +71,17 @@ public class FeedbackFrag extends Fragment {
 
             }
         });
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        DatabaseReference myRef = database.getReference();
+
+
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 temp = ratingNum.getText().toString();
-                showRating.setText("Your Rating: \n" + temp + "\n" + name.getText());
+                showRating.setText(getString(R.string.ratingText) + temp + "\n" + name.getText());
                 name.setText("");
                 ratingBar.setRating(0);
                 ratingNum.setText("");

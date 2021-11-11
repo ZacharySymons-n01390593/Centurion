@@ -55,4 +55,8 @@
     <string name="good">good</string>
     <string name="great">great</string>
     <string name="amazing">amazing</string>
+    <string name="ratingText">Your Rating: \n</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_any_comments_you_have">Enter any comments you have</string>
 </resources>

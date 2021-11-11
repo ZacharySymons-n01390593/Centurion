@@ -58,6 +58,11 @@
     <string name="locked">Locked</string>
     <string name="humidityreading">0%</string>
     <string name="temperaturereading">0.00 C</string>
+    <string name="randomNumber">1122969682</string>
+    <string name="feedback">Feedback</string>
+    <string name="how_would_you_rate_our_app">How would you rate our app?</string>
+    <string name="your_rating">Your Rating:</string>
+    <string name="change_app_theme">change app theme</string>
 
 
 </resources>

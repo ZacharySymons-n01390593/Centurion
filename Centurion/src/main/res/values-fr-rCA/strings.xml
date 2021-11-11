@@ -49,4 +49,10 @@
     <string name="how_would_you_rate_our_app">How would you rate our app?</string>
     <string name="your_rating">Your Rating:</string>
     <string name="enter_name">Enter your name: </string>
+    <string name="rating_bad">Bad </string>
+    <string name="out_of_five">/5</string>
+    <string name="ok">OK</string>
+    <string name="good">good</string>
+    <string name="great">great</string>
+    <string name="amazing">amazing</string>
 </resources>

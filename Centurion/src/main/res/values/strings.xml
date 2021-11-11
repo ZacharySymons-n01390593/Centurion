@@ -66,6 +66,12 @@
     <string name="enter_name">Enter your name: </string>
     <string name="project_name">Centurion Home Control System</string>
     <string name="team_name">Centurion</string>
+    <string name="rating_bad">Bad </string>
+    <string name="out_of_five">/5</string>
+    <string name="ok">OK </string>
+    <string name="good">GOOD </string>
+    <string name="great">GREAT </string>
+    <string name="amazing">AMAZING </string>
 
 
 </resources>

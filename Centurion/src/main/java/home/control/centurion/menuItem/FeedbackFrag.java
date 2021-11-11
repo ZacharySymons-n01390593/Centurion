@@ -39,6 +39,41 @@ public class FeedbackFrag extends Fragment {
         ratingNum = root.findViewById(R.id.rateNumber);
         ratingBar = root.findViewById(R.id.ratingBar);
         name = root.findViewById(R.id.name);
+        submit = root.findViewById(R.id.submit);
+
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                rateValue = ratingBar.getRating();
+
+                if (rateValue<=1 && rateValue>0) {
+                    ratingNum.setText(getString(R.string.rating_bad) + " " + rateValue + " " + getString(R.string.out_of_five));
+                }
+                else if(rateValue<=2 && rateValue>1) {
+                    ratingNum.setText(getString(R.string.ok) + " " + rateValue + getString(R.string.out_of_five));
+                }
+                else if(rateValue<=3 && rateValue>2) {
+                    ratingNum.setText(getString(R.string.good) + " " + rateValue + getString(R.string.out_of_five));
+                }
+                else if(rateValue<=4 && rateValue>3) {
+                    ratingNum.setText(getString(R.string.great) + " " + rateValue + getString(R.string.out_of_five));
+                }
+                else if(rateValue<=5 && rateValue>4) {
+                    ratingNum.setText(getString(R.string.amazing) + " " + rateValue + getString(R.string.out_of_five));
+                }
+
+            }
+        });
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                temp = ratingNum.getText().toString();
+                showRating.setText("Your Rating: \n" + temp + "\n" + name.getText());
+                name.setText("");
+                ratingBar.setRating(0);
+                ratingNum.setText("");
+            }
+        });
 
 
 

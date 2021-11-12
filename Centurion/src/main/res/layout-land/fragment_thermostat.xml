@@ -21,7 +21,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.256"
+            app:layout_constraintHorizontal_bias="0.181"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.953" />
@@ -120,6 +120,51 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.243" />
+
+        <ImageButton
+            android:id="@+id/increment"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/textwidth"
+            android:layout_height="@dimen/textheight"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.848"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.94" />
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="@dimen/textwidth"
+            android:layout_height="@dimen/textheight"
+            android:background="@android:color/transparent"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.708"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.94"
+            tools:text="0" />
+
+        <ImageButton
+            android:id="@+id/decrement"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/textwidth"
+            android:layout_height="@dimen/textheight"
+            android:scaleType="fitCenter"
+            android:scaleY="-1"
+            android:src="@drawable/arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.94" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

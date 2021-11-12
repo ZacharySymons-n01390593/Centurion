@@ -19,7 +19,7 @@
     <string name="carbon_monoxide_fragment">Carbon Monoxide Fragment</string>
     <string name="on_off">On/Off</string>
     <string name="timer">Timer</string>
-    <string name="light_schedule">Light Schedule</string>
+    <string name="light_schedule">Active Hours</string>
     <string name="are_you_sure">Are you sure you want to call 911?</string>
     <string name="emergCall">Emergency Call</string>
     <string name="carbon_emergency_button">Contact EMS</string>
@@ -45,11 +45,12 @@
     <string name="toggle_dark_light_mode">Toggle Dark/Light Mode</string>
 
 
-    <string-array name="timer">
-        <item>5 min</item>
-        <item>10 min</item>
+    <string-array name="timerArray">
         <item>15 min</item>
         <item>30 min</item>
+        <item>45 min</item>
+        <item>60 min</item>
+
     </string-array>
     <string name="lockBTN">Lock</string>
     <string name="toggle_portrait_lock">Toggle Portrait Lock</string>

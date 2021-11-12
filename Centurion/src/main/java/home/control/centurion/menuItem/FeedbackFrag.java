@@ -2,6 +2,7 @@ package home.control.centurion.menuItem;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -11,10 +12,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 
@@ -41,6 +47,7 @@ public class FeedbackFrag extends Fragment {
 
         ratingNum = root.findViewById(R.id.rateNumber);
         ratingBar = root.findViewById(R.id.ratingBar);
+
         name = root.findViewById(R.id.name);
         email = root.findViewById(R.id.email);
         phoneNum = root.findViewById(R.id.phoneNumber);
@@ -75,16 +82,39 @@ public class FeedbackFrag extends Fragment {
 
         DatabaseReference myRef = database.getReference();
 
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Object value = dataSnapshot.getValue();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(getContext(), "failed to read value",
+                        Toast.LENGTH_LONG).show();            }
+        });
+
+
+
 
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                temp = ratingNum.getText().toString();
-                showRating.setText(getString(R.string.ratingText) + temp + "\n" + name.getText());
+                myRef.child("Users").child(name.getText().toString()).child("email").setValue(email.getText().toString());
+                myRef.child("Users").child(name.getText().toString()).child("feedback").setValue(comment.getText().toString());
+                myRef.child("Users").child(name.getText().toString()).child("name").setValue(name.getText().toString());
+                myRef.child("Users").child(name.getText().toString()).child("phone number").setValue(phoneNum.getText().toString());
+                myRef.child("Users").child(name.getText().toString()).child("rating").setValue(rateValue);
+
                 name.setText("");
                 ratingBar.setRating(0);
                 ratingNum.setText("");
+                phoneNum.setText("");
+                comment.setText("");
+                email.setText("");
+                Toast.makeText(getContext(), "Thanks for your feedback!",
+                        Toast.LENGTH_LONG).show();
             }
         });
 

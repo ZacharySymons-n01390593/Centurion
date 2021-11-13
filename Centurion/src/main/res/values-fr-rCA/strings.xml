@@ -60,4 +60,19 @@
     <string name="enter_your_email">Enter your email</string>
     <string name="enter_any_comments_you_have">Enter any comments you have</string>
     <string name="FeedbackSubmitBTN">Submit</string>
+    <string name="on_offlandscape_fan">ON/OFF</string>
+    <string name="on_off_landscape_light">ON/OFF</string>
+    <string name="current_temperature_landscape_home">Current Temperature:</string>
+    <string name="fan_control_landscape_home">Fan Control</string>
+    <string name="on_off_light_home">ON/OFF</string>
+    <string name="on_off_fan_home">ON/OFF</string>
+    <string name="fan_control_home">Fan Control</string>
+    <string name="light_control_home">Light Control</string>
+    <string name="current_temperature_home">Current Temperature:</string>
+    <string name="temperature_control_landscape_therm">Temperature Control</string>
+    <string name="desired_temperature_landscape_temp">Desired Temperature</string>
+    <string name="fan_switch_landscape_temp">Fan Switch</string>
+    <string name="desired_temperature_temp">Desired Temperature</string>
+    <string name="fan_switch_temp">Fan Switch</string>
+    <string name="temperature_control_temp">Temperature Control</string>
 </resources>

@@ -18,8 +18,8 @@ import home.control.centurion.R;
 
 public class ThermostatFrag extends Fragment {
 
-
-
+    int temp = 25;
+    static int placeholder;
 
     public ThermostatFrag() {
         // Required empty public constructor
@@ -33,7 +33,9 @@ public class ThermostatFrag extends Fragment {
         ImageButton increment = root.findViewById(R.id.increment);
         ImageButton decrement = root.findViewById(R.id.decrement);
         TextView number = (TextView) root.findViewById(R.id.number);
-        number.setText(""+25);
+        number.setText(""+temp);
+
+
 
         increment.setOnClickListener(
         new View.OnClickListener() {
@@ -42,7 +44,10 @@ public class ThermostatFrag extends Fragment {
                 int temp = Integer.parseInt(number.getText().toString().trim());
                 if(temp < 50)
                 temp++;
-                number.setText(""+temp);
+                placeholder = temp;
+                number.setText(""+placeholder);
+
+
 
             }
 
@@ -60,6 +65,10 @@ public class ThermostatFrag extends Fragment {
                     }
 
                 });
+
+
         return root;
     }
+
+
 }

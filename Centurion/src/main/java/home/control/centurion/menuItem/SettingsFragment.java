@@ -1,10 +1,14 @@
 //Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690).
 package home.control.centurion.menuItem;
 
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
@@ -12,6 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
+import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 import home.control.centurion.ui.main.MainViewModel;
 
@@ -30,9 +35,6 @@ public class SettingsFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_settings, container, false);
         Button btnToggleDark = root.findViewById(R.id.btnDarkModeToggle);
-
-
-
 
 
         btnToggleDark.setOnClickListener(
@@ -61,5 +63,8 @@ public class SettingsFragment extends Fragment {
         return root;
 
     }
+
+
+
 
 }

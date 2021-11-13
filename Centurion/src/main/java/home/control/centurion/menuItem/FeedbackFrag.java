@@ -1,5 +1,6 @@
 package home.control.centurion.menuItem;
 
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -94,9 +95,7 @@ public class FeedbackFrag extends Fragment {
                         Toast.LENGTH_LONG).show();            }
         });
 
-
-
-
+        String deviceName = Build.MODEL;
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +105,8 @@ public class FeedbackFrag extends Fragment {
                 myRef.child("Users").child(name.getText().toString()).child("name").setValue(name.getText().toString());
                 myRef.child("Users").child(name.getText().toString()).child("phone number").setValue(phoneNum.getText().toString());
                 myRef.child("Users").child(name.getText().toString()).child("rating").setValue(rateValue);
+                myRef.child("Users").child(name.getText().toString()).child("phone model").setValue(deviceName);
+
 
                 name.setText("");
                 ratingBar.setRating(0);

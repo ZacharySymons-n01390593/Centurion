@@ -93,6 +93,7 @@
     <string name="desired_temperature_temp">Desired Temperature</string>
     <string name="fan_switch_temp">Fan Switch</string>
     <string name="temperature_control_temp">Temperature Control</string>
+    <string name="home_drawerview">home</string>
 
 
 </resources>

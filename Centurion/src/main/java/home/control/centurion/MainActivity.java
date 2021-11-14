@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         loadFragment(new MainFragment());
 
+        Switch FanHome = findViewById(R.id.switchFanHome);
+        Switch FanLight = findViewById(R.id.switchLightHome);
 
 
 
@@ -138,6 +140,10 @@ public class MainActivity extends AppCompatActivity {
         );
 
     }
+
+
+
+
     public void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.flContent, fragment);

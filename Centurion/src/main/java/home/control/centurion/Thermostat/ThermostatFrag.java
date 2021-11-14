@@ -36,15 +36,15 @@ public class ThermostatFrag extends Fragment {
         View root = inflater.inflate(R.layout.fragment_thermostat, container, false);
         ImageButton increment = root.findViewById(R.id.increment);
         ImageButton decrement = root.findViewById(R.id.decrement);
-        Switch FanHome = root.findViewById(R.id.fanSwitch);
-        Switch FanLight = root.findViewById(R.id.fanSwitch2);
+        Switch Switch1 = root.findViewById(R.id.fanSwitch);
+        Switch Switch2 = root.findViewById(R.id.fanSwitch2);
         TextView number = (TextView) root.findViewById(R.id.number);
         number.setText(""+temp);
 
 
 
 
-        FanHome.setOnClickListener(new View.OnClickListener() {
+        Switch1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Snackbar snackbar = Snackbar.make(v,"Fan Toggled",Snackbar.LENGTH_LONG);
@@ -55,7 +55,7 @@ public class ThermostatFrag extends Fragment {
             }
         });
 
-        FanLight.setOnClickListener(new View.OnClickListener() {
+        Switch2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Snackbar snackbar = Snackbar.make(v,"Fan Toggled",Snackbar.LENGTH_LONG);

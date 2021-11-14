@@ -73,20 +73,20 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:layout_width="365dp"
-        android:layout_height="77dp"
+        android:layout_width="152dp"
+        android:layout_height="36dp"
         android:text="@string/lock_state"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.943" />
+        app:layout_constraintVertical_bias="0.89" />
 
     <TextView
-        android:layout_width="271dp"
-        android:layout_height="54dp"
+        android:layout_width="269dp"
+        android:layout_height="38dp"
         android:text="@string/locked"
         android:textAlignment="center"
         android:textColor="@color/red"
@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901" />
+        app:layout_constraintVertical_bias="0.89" />
 
     <ImageView
         android:layout_width="166dp"
@@ -102,7 +102,7 @@
         android:src="@drawable/rfid"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.55" />

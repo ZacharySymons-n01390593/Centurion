@@ -1,6 +1,7 @@
 //Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690)
 package home.control.centurion.Thermostat;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -36,7 +37,7 @@ public class ThermostatFrag extends Fragment {
         ImageButton increment = root.findViewById(R.id.increment);
         ImageButton decrement = root.findViewById(R.id.decrement);
         Switch FanHome = root.findViewById(R.id.fanSwitch);
-       // Switch FanLight = root.findViewById(R.id.switchLightHome);
+        Switch FanLight = root.findViewById(R.id.fanSwitch2);
         TextView number = (TextView) root.findViewById(R.id.number);
         number.setText(""+temp);
 
@@ -46,14 +47,24 @@ public class ThermostatFrag extends Fragment {
         FanHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar snackbar = Snackbar.make(v,"Tech Projects",Snackbar.LENGTH_LONG);
+                Snackbar snackbar = Snackbar.make(v,"Fan Toggled",Snackbar.LENGTH_LONG);
+                snackbar.setTextColor(Color.RED);
                 snackbar.show();
 
 
             }
         });
 
+        FanLight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar snackbar = Snackbar.make(v,"Fan Toggled",Snackbar.LENGTH_LONG);
+                snackbar.setTextColor(Color.RED);
+                snackbar.show();
 
+
+            }
+        });
 
 
         increment.setOnClickListener(

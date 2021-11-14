@@ -91,7 +91,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.138" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/fanSwitch"
             android:layout_width="@dimen/textwidth"
             android:layout_height="@dimen/textheight"
@@ -137,7 +137,6 @@
             android:layout_width="@dimen/textwidth"
             android:layout_height="@dimen/textheight"
             android:background="@android:color/transparent"
-            android:inputType="number"
             android:selectAllOnFocus="true"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -163,11 +162,11 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.913" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Switch"
+            android:text="@string/switch1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

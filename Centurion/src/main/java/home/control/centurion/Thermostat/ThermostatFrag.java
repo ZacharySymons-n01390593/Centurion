@@ -37,7 +37,7 @@ public class ThermostatFrag extends Fragment {
         ImageButton increment = root.findViewById(R.id.increment);
         ImageButton decrement = root.findViewById(R.id.decrement);
         Switch FanHome = root.findViewById(R.id.fanSwitch);
-        Switch FanLight = root.findViewById(R.id.fanSwitch2);
+        Switch FanLight = root.findViewById(R.id.switch1);
         TextView number = (TextView) root.findViewById(R.id.number);
         number.setText(""+temp);
 
@@ -58,7 +58,7 @@ public class ThermostatFrag extends Fragment {
         FanLight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar snackbar = Snackbar.make(v,"Fan Toggled",Snackbar.LENGTH_LONG);
+                Snackbar snackbar = Snackbar.make(v,"Desired Temperature Toggled",Snackbar.LENGTH_LONG);
                 snackbar.setTextColor(Color.RED);
                 snackbar.show();
 

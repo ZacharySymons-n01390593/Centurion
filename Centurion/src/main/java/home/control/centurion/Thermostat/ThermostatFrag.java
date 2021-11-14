@@ -9,7 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Switch;
 import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.text.NumberFormat;
 
@@ -32,8 +35,25 @@ public class ThermostatFrag extends Fragment {
         View root = inflater.inflate(R.layout.fragment_thermostat, container, false);
         ImageButton increment = root.findViewById(R.id.increment);
         ImageButton decrement = root.findViewById(R.id.decrement);
+        Switch FanHome = root.findViewById(R.id.fanSwitch);
+       // Switch FanLight = root.findViewById(R.id.switchLightHome);
         TextView number = (TextView) root.findViewById(R.id.number);
         number.setText(""+temp);
+
+
+
+
+        FanHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar snackbar = Snackbar.make(v,"Tech Projects",Snackbar.LENGTH_LONG);
+                snackbar.show();
+
+
+            }
+        });
+
+
 
 
         increment.setOnClickListener(
@@ -63,6 +83,9 @@ public class ThermostatFrag extends Fragment {
                     }
 
                 });
+
+
+
 
 
         return root;

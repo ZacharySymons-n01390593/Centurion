@@ -21,6 +21,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 import android.content.DialogInterface;
 
@@ -46,9 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         loadFragment(new MainFragment());
-
-        Switch FanHome = findViewById(R.id.switchFanHome);
-        Switch FanLight = findViewById(R.id.switchLightHome);
 
 
 
@@ -150,6 +148,11 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
+
+
+
+
+
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
@@ -198,4 +201,9 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
+
+
+
 }

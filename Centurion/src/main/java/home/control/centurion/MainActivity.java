@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import android.content.DialogInterface;
 
@@ -39,6 +41,10 @@ import home.control.centurion.ui.main.MainFragment;
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
+
+    private View parentView;
+    private Button darkButton;
+    private TextView themeText, titletext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -203,6 +209,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void initWidgets(){
+        themeText = findViewById(R.id.btnDarkModeToggle);
+    }
 
 
 

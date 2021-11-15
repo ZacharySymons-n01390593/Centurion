@@ -19,11 +19,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import home.control.centurion.R;
 
 
 public class CarbonMonoxideFrag extends Fragment {
+
+
+    TextView Output ;
+    Button revealbtn ;
+    private DatabaseReference databaseReference;
 
     int requestCall=1;
     public CarbonMonoxideFrag() {
@@ -44,6 +53,15 @@ public class CarbonMonoxideFrag extends Fragment {
                 makePhoneCall();
             }
         });
+
+        Output =root.findViewById(R.id.textViewC02placeholder);
+        revealbtn = root.findViewById(R.id.RevealC02Button);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("reading");
+
+
+         //Output.addValueEventListener(new)
+
 
         return root;
     }

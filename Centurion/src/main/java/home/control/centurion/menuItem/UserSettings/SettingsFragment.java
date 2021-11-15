@@ -39,7 +39,6 @@ public class SettingsFragment extends Fragment {
     private boolean switchOnOff;
 
 
-    private UserSettings setting;
 
     public static SettingsFragment newInstance() {
         return new SettingsFragment();

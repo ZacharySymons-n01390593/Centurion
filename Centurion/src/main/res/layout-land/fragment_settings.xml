@@ -9,7 +9,7 @@
     android:background="@color/burgundy">
 
     <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/btnTooglePortraitLock2"
+        android:id="@+id/btnGenNotif"
         android:layout_width="248dp"
         android:layout_height="119dp"
         android:text="@string/change_taskbar_colour"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.38" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/btnTooglePortraitLock"
+        android:id="@+id/btnToasts"
         android:layout_width="248dp"
         android:layout_height="119dp"
         android:text="something different"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.893" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/btnChangeAppTheme"
+        android:id="@+id/btnEmergNotif"
         android:layout_width="248dp"
         android:layout_height="119dp"
         android:text="@string/change_app_theme"

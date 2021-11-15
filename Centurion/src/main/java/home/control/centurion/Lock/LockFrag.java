@@ -53,8 +53,5 @@ private boolean lock = true;
 
         return root;
     }
-    public void lockTheDoor(){
-
-    }
 
 }

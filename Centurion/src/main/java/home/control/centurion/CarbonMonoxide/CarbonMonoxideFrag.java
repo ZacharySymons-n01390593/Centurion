@@ -31,7 +31,8 @@ import home.control.centurion.R;
 
 
 public class CarbonMonoxideFrag extends Fragment {
-
+    // One responsibility principal
+    // This fragment is only responsible for displaying the current readings of the C02 sensor and allowing users to contact EMS
 
     TextView Output ;
     Button revealbtn ;

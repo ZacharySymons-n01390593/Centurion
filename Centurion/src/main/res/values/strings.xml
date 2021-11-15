@@ -93,7 +93,7 @@
     <string name="desired_temperature_temp">Desired Temperature</string>
     <string name="fan_switch_temp">Fan Switch</string>
     <string name="temperature_control_temp">Temperature Control</string>
-    <string name="home_drawerview">home</string>
+    <string name="home_drawerview">Home</string>
     <string name="switch1">Switch</string>
     <string name="show_current_c02_level_btn">Show Current C02 Level</string>
 

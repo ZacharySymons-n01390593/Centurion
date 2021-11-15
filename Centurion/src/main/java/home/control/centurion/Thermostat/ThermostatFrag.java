@@ -37,71 +37,57 @@ public class ThermostatFrag extends Fragment {
         View root = inflater.inflate(R.layout.fragment_thermostat, container, false);
         ImageButton increment = root.findViewById(R.id.increment);
         ImageButton decrement = root.findViewById(R.id.decrement);
-        Switch FanHome = root.findViewById(R.id.fanSwitch);
-        Switch FanLight = root.findViewById(R.id.switch1);
+        Switch FanToggle = root.findViewById(R.id.fanSwitch);
+        Switch FanDTempToggle = root.findViewById(R.id.switch1);
         TextView number = (TextView) root.findViewById(R.id.number);
         number.setText(""+temp);
 
 
-
-
-        FanHome.setOnClickListener(new View.OnClickListener() {
+        FanToggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Snackbar snackbar = Snackbar.make(v,"Fan Toggled",Snackbar.LENGTH_LONG);
                 snackbar.setTextColor(Color.RED);
                 snackbar.show();
-
-
             }
         });
 
-        FanLight.setOnClickListener(new View.OnClickListener() {
+        FanDTempToggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Snackbar snackbar = Snackbar.make(v,"Desired Temperature Toggled",Snackbar.LENGTH_LONG);
                 snackbar.setTextColor(Color.RED);
                 snackbar.show();
-
-
             }
         });
-
 
         increment.setOnClickListener(
         new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 temp = Integer.parseInt(number.getText().toString().trim());
-                if(temp < 50)
-                temp++;
-                number.setText(""+temp);
 
-
-
+                if (FanDTempToggle.isChecked()) {
+                temp = Integer.parseInt(number.getText().toString().trim());
+                if (temp < 50)
+                    temp++;
+                number.setText("" + temp);
+                }
             }
-
         });
 
         decrement.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                         temp = Integer.parseInt(number.getText().toString());
-                        if(temp > 0)
-                            temp--;
-                        number.setText(""+temp);
-
+                        if(FanDTempToggle.isChecked()) {
+                            temp = Integer.parseInt(number.getText().toString());
+                            if (temp > 0)
+                                temp--;
+                            number.setText("" + temp);
+                        }
                     }
-
                 });
-
-
-
-
 
         return root;
     }
-
-
 }

@@ -136,8 +136,8 @@
 
     <Button
         android:id="@+id/RevealC02Button"
-        android:layout_width="116dp"
-        android:layout_height="68dp"
+        android:layout_width="115sp"
+        android:layout_height="70sp"
         android:text="@string/show_current_c02_level_btn"
         android:backgroundTint="@android:color/black"
         android:textColor="@color/white"

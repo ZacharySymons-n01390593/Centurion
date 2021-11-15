@@ -21,8 +21,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import home.control.centurion.R;
 
@@ -57,7 +60,31 @@ public class CarbonMonoxideFrag extends Fragment {
         Output =root.findViewById(R.id.textViewC02placeholder);
         revealbtn = root.findViewById(R.id.RevealC02Button);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("reading");
+
+
+
+        revealbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                databaseReference = FirebaseDatabase.getInstance().getReference().child("CO2 readings");
+                databaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        String reading = dataSnapshot.child("reading").getValue().toString();
+                        Output.setText(reading);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+
+            }
+        });
+
 
 
          //Output.addValueEventListener(new)

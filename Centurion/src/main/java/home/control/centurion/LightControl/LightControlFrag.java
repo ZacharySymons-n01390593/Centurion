@@ -4,6 +4,7 @@ package home.control.centurion.LightControl;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -16,6 +17,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -56,27 +59,40 @@ URL ImageUrl;
         switchOn_Off.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                On_Off();
+                On_Off(v);
             }
         });
-
 
         return root;
     }
 
-    public void On_Off(){
+    public void On_Off(View v){
 
         if (!switchOn_Off.isChecked()){
             strURL = "https://icon-library.com/images/light-off-icon/light-off-icon-23.jpg";
             AsyncTaskExample asyncTask1=new AsyncTaskExample();
             asyncTask1.execute(strURL);
 
+            Snackbar snackbar = Snackbar.make(v, "Light Switched On", Snackbar.LENGTH_LONG);
+            snackbar.setTextColor(Color.RED);
+            snackbar.show();
+
         }
         if (switchOn_Off.isChecked()){
             AsyncTaskExample asyncTask2=new AsyncTaskExample();
             strURL = "https://cdn-icons-png.flaticon.com/512/702/702797.png";
             asyncTask2.execute(strURL);
+
+
+            Snackbar snackbar = Snackbar.make(v, "Light Switched Off", Snackbar.LENGTH_LONG);
+            snackbar.setTextColor(Color.RED);
+            snackbar.show();
         }
+
+
+
+
+
     }
 
     private class AsyncTaskExample extends AsyncTask<String, String, Bitmap> {

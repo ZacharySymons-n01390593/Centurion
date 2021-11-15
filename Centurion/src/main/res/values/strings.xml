@@ -24,7 +24,7 @@
     <string name="emergCall">Emergency Call</string>
     <string name="carbon_emergency_button">Contact EMS</string>
     <string name="current_c02_level_txtview">CURRENT C02 LEVEL:</string>
-    <string name="placeholder_carbon">PLACEHOLDER.\nThis will likely be replaced by a textview that imports the sensor readings from the hardware</string>
+    <string name="placeholder_carbon">no current reading</string>
     <string name="safe_carbon_txtview">SAFE</string>
     <string name="moderate_carbon_txtview">MODERATE</string>
     <string name="unhealthy_carbon_txtview">UNHEALTHY</string>
@@ -43,7 +43,7 @@
     <string name="clock_icon">Clock Icon</string>
     <string name="light_bulb">Light Bulb</string>
     <string name="toggle_dark_light_mode">Toggle Dark/Light Mode</string>
-
+    <string name="unlocked">Unlocked</string>
 
     <string-array name="timerArray">
         <item>15 min</item>
@@ -95,6 +95,7 @@
     <string name="temperature_control_temp">Temperature Control</string>
     <string name="home_drawerview">home</string>
     <string name="switch1">Switch</string>
+    <string name="show_current_c02_level_btn">Show Current C02 Level</string>
 
 
 </resources>

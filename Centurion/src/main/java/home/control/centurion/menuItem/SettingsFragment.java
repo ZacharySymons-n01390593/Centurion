@@ -1,5 +1,5 @@
 //Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690).
-package home.control.centurion.menuItem.UserSettings;
+package home.control.centurion.menuItem;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +19,6 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import home.control.centurion.R;
-import home.control.centurion.ui.main.MainFragment;
 import home.control.centurion.ui.main.MainViewModel;
 
 public class SettingsFragment extends Fragment {

@@ -5,64 +5,50 @@
     android:id="@+id/settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menuItem.UserSettings.SettingsFragment"
+    tools:context=".menuItem.SettingsFragment"
     android:background="@color/burgundy">
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/btnGenNotif"
-        android:layout_width="250dp"
-        android:layout_height="85dp"
+        android:layout_width="248dp"
+        android:layout_height="119dp"
         android:text="@string/general_notifications"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintVertical_bias="0.439" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/btnToasts"
-        android:layout_width="250dp"
-        android:layout_height="85dp"
+        android:layout_width="248dp"
+        android:layout_height="119dp"
         android:text="@string/toasts"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
-
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/btnSnackbars"
-        android:layout_width="250dp"
-        android:layout_height="85dp"
-        android:text="@string/snackbars"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.546"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintVertical_bias="0.663" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/btnEmergNotif"
-        android:layout_width="250dp"
-        android:layout_height="85dp"
+        android:layout_width="248dp"
+        android:layout_height="119dp"
         android:text="@string/emergency_notifications"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352" />
+        app:layout_constraintVertical_bias="0.223" />
 
     <TextView
         android:id="@+id/message"
@@ -81,18 +67,17 @@
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/btnDarkModeToggle"
-        android:layout_width="250dp"
-        android:layout_height="85dp"
+        android:layout_width="248dp"
+        android:layout_height="119dp"
         android:text="@string/toggle_dark_light_mode"
-        android:textColor="@color/black"
-        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846" />
-
+        app:layout_constraintVertical_bias="0.888" />
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"

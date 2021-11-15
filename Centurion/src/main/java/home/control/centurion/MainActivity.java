@@ -35,7 +35,8 @@ import home.control.centurion.LightControl.LightControlFrag;
 import home.control.centurion.Lock.LockFrag;
 import home.control.centurion.Thermostat.ThermostatFrag;
 import home.control.centurion.menuItem.FeedbackFrag;
-import home.control.centurion.menuItem.UserSettings.SettingsFragment;
+
+import home.control.centurion.menuItem.SettingsFragment;
 import home.control.centurion.ui.main.MainFragment;
 
 public class MainActivity extends AppCompatActivity {

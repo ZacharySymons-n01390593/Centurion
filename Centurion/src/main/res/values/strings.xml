@@ -43,7 +43,7 @@
     <string name="clock_icon">Clock Icon</string>
     <string name="light_bulb">Light Bulb</string>
     <string name="toggle_dark_light_mode">Toggle Dark/Light Mode</string>
-
+    <string name="unlocked">Unlocked</string>
 
     <string-array name="timerArray">
         <item>15 min</item>

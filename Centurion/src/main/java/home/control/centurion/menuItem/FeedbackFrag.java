@@ -27,6 +27,8 @@ import home.control.centurion.R;
 
 public class FeedbackFrag extends Fragment {
 
+    // DRY principle in effect
+
     TextView ratingNum, showRating;
     EditText name, phoneNum, email, comment;
     Button submit;

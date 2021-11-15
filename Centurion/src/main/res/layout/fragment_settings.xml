@@ -9,10 +9,10 @@
     android:background="@color/burgundy">
 
     <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/btnTooglePortraitLock2"
+        android:id="@+id/btnGenNotif"
         android:layout_width="248dp"
         android:layout_height="119dp"
-        android:text="@string/change_taskbar_colour"
+        android:text="@string/general_notifications"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,10 +23,10 @@
         app:layout_constraintVertical_bias="0.439" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/btnTooglePortraitLock"
+        android:id="@+id/btnToasts"
         android:layout_width="248dp"
         android:layout_height="119dp"
-        android:text="something different"
+        android:text="@string/toasts"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,10 +37,10 @@
         app:layout_constraintVertical_bias="0.663" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/btnChangeAppTheme"
+        android:id="@+id/btnEmergNotif"
         android:layout_width="248dp"
         android:layout_height="119dp"
-        android:text="@string/change_app_theme"
+        android:text="@string/emergency_notifications"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

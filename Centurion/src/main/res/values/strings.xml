@@ -96,6 +96,9 @@
     <string name="home_drawerview">Home</string>
     <string name="switch1">Switch</string>
     <string name="show_current_c02_level_btn">Show Current C02 Level</string>
+    <string name="emergency_notifications">Emergency Notifications</string>
+    <string name="toasts">Toasts</string>
+    <string name="general_notifications">General Notifications</string>
 
 
 </resources>

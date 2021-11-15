@@ -1,24 +1,25 @@
 package home.control.centurion.menuItem.UserSettings;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 
 public class UserSettings extends Application{
+    SharedPreferences mySharedPref ;
 
-    public static final String PREFERENCES = "preferences";
-    public static final String CUSTOM_THEME = "customTheme";
-
-    public static final String DARK_THEME = "darkTheme";
-    public static final String LIGHT_THEME = "LightTheme";
-
-
-    private String customTheme;
-
-
-    public String getCustomTheme() {
-        return customTheme;
+    public void SharedPref(Context context) {
+        mySharedPref = context.getSharedPreferences("filename",Context.MODE_PRIVATE);
+    }
+    // this method will save the nightMode State : True or False
+    public void setNightModeState(Boolean state) {
+        SharedPreferences.Editor editor = mySharedPref.edit();
+        editor.putBoolean("NightMode",state);
+        editor.commit();
+    }
+    // this method will load the Night Mode State
+    public Boolean loadNightModeState (){
+        Boolean state = mySharedPref.getBoolean("NightMode",false);
+        return  state;
     }
 
-    public void setCustomTheme(String customTheme) {
-        this.customTheme = customTheme;
-    }
 }

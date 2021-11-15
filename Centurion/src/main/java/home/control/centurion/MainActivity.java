@@ -10,7 +10,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,8 +21,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import android.content.DialogInterface;
 
@@ -35,7 +32,7 @@ import home.control.centurion.LightControl.LightControlFrag;
 import home.control.centurion.Lock.LockFrag;
 import home.control.centurion.Thermostat.ThermostatFrag;
 import home.control.centurion.menuItem.FeedbackFrag;
-import home.control.centurion.menuItem.SettingsFragment;
+import home.control.centurion.menuItem.UserSettings.SettingsFragment;
 import home.control.centurion.ui.main.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -193,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://humber.ca"));
                 startActivity(intent1);
                 return true;
-            case (R.id.settings):
+            case (R.id.settingsMenu):
                 loadFragment(new SettingsFragment());
                 return true;
             case (R.id.help):
@@ -210,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initWidgets(){
-        themeText = findViewById(R.id.btnDarkModeToggle);
+
     }
 
 

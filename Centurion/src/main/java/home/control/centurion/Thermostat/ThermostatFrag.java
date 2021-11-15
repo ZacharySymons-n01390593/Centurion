@@ -22,6 +22,7 @@ import home.control.centurion.R;
 
 public class ThermostatFrag extends Fragment {
 
+    //DRY principle used as the increments and decrements are independent
 
     static int temp= 21;
 

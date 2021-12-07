@@ -21,12 +21,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 
@@ -37,6 +39,8 @@ public class CarbonMonoxideFrag extends Fragment {
     TextView Output ;
     Button revealbtn ;
     private DatabaseReference databaseReference;
+    private FloatingActionButton homebtn;
+
 
     int requestCall=1;
     public CarbonMonoxideFrag() {
@@ -57,6 +61,16 @@ public class CarbonMonoxideFrag extends Fragment {
                 makePhoneCall();
             }
         });
+
+        homebtn = root.findViewById(R.id.fab_co2);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         Output =root.findViewById(R.id.textViewC02placeholder);
         revealbtn = root.findViewById(R.id.RevealC02Button);

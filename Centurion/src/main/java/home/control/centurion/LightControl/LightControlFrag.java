@@ -30,8 +30,8 @@ import home.control.centurion.R;
 
 public class LightControlFrag extends Fragment {
 
-URL ImageUrl;
-        ProgressDialog p;
+    URL ImageUrl;
+    ProgressDialog p;
     InputStream is = null;
     Bitmap bmImg = null;
     ImageView imageView = null;
@@ -69,22 +69,22 @@ URL ImageUrl;
     public void On_Off(View v){
 
         if (!switchOn_Off.isChecked()){
-            strURL = "https://icon-library.com/images/light-off-icon/light-off-icon-23.jpg";
+            strURL = "https://icon-library.com/images/light-off-icon/light-off-icon-23.jpg"; //pass string of URL to async task to download image
             AsyncTaskExample asyncTask1=new AsyncTaskExample();
             asyncTask1.execute(strURL);
 
-            Snackbar snackbar = Snackbar.make(v, "Light Switched On", Snackbar.LENGTH_LONG);
+            Snackbar snackbar = Snackbar.make(v, "Light Switched On", Snackbar.LENGTH_LONG); //implement snackbar to let user know state of the light was updated
             snackbar.setTextColor(Color.RED);
             snackbar.show();
 
         }
         if (switchOn_Off.isChecked()){
             AsyncTaskExample asyncTask2=new AsyncTaskExample();
-            strURL = "https://cdn-icons-png.flaticon.com/512/702/702797.png";
+            strURL = "https://cdn-icons-png.flaticon.com/512/702/702797.png"; //pass string of URL to async task to download image
             asyncTask2.execute(strURL);
 
 
-            Snackbar snackbar = Snackbar.make(v, "Light Switched Off", Snackbar.LENGTH_LONG);
+            Snackbar snackbar = Snackbar.make(v, "Light Switched Off", Snackbar.LENGTH_LONG);//implement snackbar to let user know state of the light was updated
             snackbar.setTextColor(Color.RED);
             snackbar.show();
         }

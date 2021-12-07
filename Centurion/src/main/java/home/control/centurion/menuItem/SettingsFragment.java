@@ -58,7 +58,7 @@ public class SettingsFragment extends Fragment {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveData();
+                saveData(); //calls function to save settings in shared preferences
 
                 if (darkButton.isChecked()){
                     AppCompatDelegate
@@ -100,7 +100,7 @@ public class SettingsFragment extends Fragment {
 
     public void loadData() {
         SharedPreferences sharedPreferences = requireContext().getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-        switchOnOff = sharedPreferences.getBoolean(SWITCH1, false);
+        switchOnOff = sharedPreferences.getBoolean(SWITCH1, false); //create shared prefrences for rest of swithces in settings activity
 
     }
 

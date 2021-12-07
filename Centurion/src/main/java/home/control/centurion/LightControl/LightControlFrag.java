@@ -49,7 +49,7 @@ public class LightControlFrag extends Fragment {
         View root = inflater.inflate(R.layout.fragment_lightcontrol, container, false);
 
         imageView = (ImageView) root.findViewById(R.id.imageView2);
-
+        //Spinner initialization
         Spinner mySpinner = (Spinner) root.findViewById(R.id.spinner);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.timerArray, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

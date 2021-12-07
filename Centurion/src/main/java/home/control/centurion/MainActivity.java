@@ -4,6 +4,8 @@ package home.control.centurion;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -43,23 +45,13 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
 
-    private View parentView;
-    private Button darkButton;
-    private TextView themeText, titletext;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-
+        //calls the splash screen fragment
         loadFragment(new MainFragment());
-
-
-
-
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
 
 
         ActionBar actionbar = getSupportActionBar();
@@ -142,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
         );
 
     }
+
 
 
 

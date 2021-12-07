@@ -73,6 +73,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.583" />
 
+
+    <Button
+        android:id="@+id/RevealC02Button"
+        android:layout_width="185dp"
+        android:layout_height="95dp"
+        android:backgroundTint="@android:color/black"
+        android:text="@string/show_current_c02_level_btn"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.917" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/emergencyBtn"
         android:layout_width="330sp"

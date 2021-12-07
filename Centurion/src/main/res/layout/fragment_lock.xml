@@ -31,7 +31,7 @@
         android:layout_width="236dp"
         android:layout_height="38dp"
 
-        android:text="@string/user_id"
+
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +45,6 @@
         android:id="@+id/lockLogo"
         android:layout_width="330dp"
         android:layout_height="129dp"
-
         android:text="@string/lock_control"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -61,8 +60,6 @@
         android:id="@+id/latestAccessLabel"
         android:layout_width="236dp"
         android:layout_height="38dp"
-
-        android:text="@string/user_id"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"

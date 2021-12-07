@@ -76,7 +76,7 @@ private DatabaseReference databaseReference;
                     //update text fields for user.
                 output.setText(reading);
                 output2.setText(reading2);
-                output3.setText(R.string.greet + reading3);
+                output3.setText(reading3);
             }
 
             @Override

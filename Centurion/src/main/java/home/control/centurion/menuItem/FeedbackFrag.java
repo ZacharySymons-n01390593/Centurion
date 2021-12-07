@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,7 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.widget.ProgressBar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,6 +36,13 @@ public class FeedbackFrag extends Fragment {
     RatingBar ratingBar;
     float rateValue;
     String temp;
+
+    private ProgressBar mProgressBar;
+    private TextView mLoadingText;
+
+    private int mProgressStatus = 0;
+
+    private final Handler mHandler = new Handler();
     public FeedbackFrag() {
         // Required empty public constructor
 
@@ -116,7 +124,30 @@ public class FeedbackFrag extends Fragment {
                 phoneNum.setText("");
                 comment.setText("");
                 email.setText("");
-                Toast.makeText(getContext(), (R.string.greet), Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), (R.string.greet), Toast.LENGTH_SHORT).show();
+                mProgressBar = root.findViewById(R.id.progressbar);
+                mLoadingText = root.findViewById(R.id.LoadingCompleteTextView);
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        while (mProgressStatus < 100){
+                            mProgressStatus++;
+                            android.os.SystemClock.sleep(50);
+                            mHandler.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    mProgressBar.setProgress(mProgressStatus);
+                                }
+                            });
+                        }
+                        mHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                mLoadingText.setVisibility(View.VISIBLE);
+                            }
+                        });
+                    }
+                }).start();
             }
         });
 

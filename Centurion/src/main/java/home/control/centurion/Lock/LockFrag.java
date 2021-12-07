@@ -38,26 +38,26 @@ private DatabaseReference databaseReference;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View root = inflater.inflate(R.layout.fragment_lock, container, false);
         ImageButton lockBTN = root.findViewById(R.id.lockBTN);
+        //create text boxes of all data required
         TextView output = root.findViewById(R.id.latestAccessLabel);
         TextView output2 = root.findViewById(R.id.latestAccessLabel2);
         TextView output3 = root.findViewById(R.id.latestAccessLabel3);
         lockBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(lock) {
+                if(lock) { // if lock is active
                     TextView lockTV = (TextView) root.findViewById(R.id.lockTV);
                     lockTV.setText(R.string.unlocked);
                     lockTV.setTextColor(ContextCompat.getColor(getContext(),R.color.green));
                     lock = false;
-                } else {
+                } else { //if lock is currently unlocked
                     TextView lockTV = (TextView) root.findViewById(R.id.lockTV);
                     lockTV.setText(R.string.locked);
                     lockTV.setTextColor(ContextCompat.getColor(getContext(),R.color.red));
                     lock = true;
-
                 }
             }
         });
@@ -68,11 +68,11 @@ private DatabaseReference databaseReference;
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
+                    //receive data from database
                 String reading = dataSnapshot.child("1-set").child("Access").getValue().toString();
                 String reading2 = dataSnapshot.child("1-set").child("CardID").getValue().toString();
                 String reading3 = dataSnapshot.child("1-set").child("User").getValue().toString();
-
+                    //update text fields for user.
                 output.setText(reading);
                 output2.setText(reading2);
                 output3.setText(reading3);

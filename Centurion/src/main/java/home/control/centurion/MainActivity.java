@@ -4,6 +4,8 @@ package home.control.centurion;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+
+
 
 
         loadFragment(new MainFragment());
@@ -142,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
         );
 
     }
+
 
 
 

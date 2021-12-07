@@ -1,8 +1,13 @@
 package home.control.centurion;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -14,12 +19,19 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
 
+
+
         new Handler().postDelayed(new Runnable() {
+
+
                                       @Override
                                       public void run() {
                                           Intent testIntent = new Intent(SplashActivity.this, MainActivity.class);
                                           startActivity(testIntent);
                                           finish();
+
+
+
                                       }
                                   }
 
@@ -27,4 +39,6 @@ public class SplashActivity extends AppCompatActivity {
 
 
     }
+
+
 }

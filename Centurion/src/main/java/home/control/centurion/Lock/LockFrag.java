@@ -1,6 +1,7 @@
 //Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690)
 package home.control.centurion.Lock;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
@@ -17,12 +18,14 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 
@@ -30,6 +33,7 @@ public class LockFrag extends Fragment {
 
 private boolean lock = true;
 private DatabaseReference databaseReference;
+private FloatingActionButton homebtn;
 
     public LockFrag() {
         // Required empty public constructor
@@ -61,6 +65,16 @@ private DatabaseReference databaseReference;
                 }
             }
         });
+
+        homebtn = root.findViewById(R.id.fab_lock);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();

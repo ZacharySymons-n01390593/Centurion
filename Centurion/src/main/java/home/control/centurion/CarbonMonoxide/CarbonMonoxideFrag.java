@@ -61,12 +61,9 @@ public class CarbonMonoxideFrag extends Fragment {
         Output =root.findViewById(R.id.textViewC02placeholder);
         revealbtn = root.findViewById(R.id.RevealC02Button);
 
-
-
-
         revealbtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //enable connection to firebase and display reading
                 databaseReference = FirebaseDatabase.getInstance().getReference().child("CO2 readings");
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
@@ -85,15 +82,9 @@ public class CarbonMonoxideFrag extends Fragment {
 
             }
         });
-
-
-
-         //Output.addValueEventListener(new)
-
-
         return root;
     }
-
+    //Method that contacts Emergency Services
     public void  makePhoneCall(){
 
         if (ContextCompat.checkSelfPermission(getContext(),

@@ -1,6 +1,7 @@
 //Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690)
 package home.control.centurion.Thermostat;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -13,10 +14,12 @@ import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.text.NumberFormat;
 
+import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 
@@ -25,7 +28,7 @@ public class ThermostatFrag extends Fragment {
     //DRY principle used as the increments and decrements are independent
 
     static int temp= 21;
-
+    private FloatingActionButton homebtn;
     public ThermostatFrag() {
         // Required empty public constructor
     }
@@ -87,6 +90,18 @@ public class ThermostatFrag extends Fragment {
                         }
                     }
                 });
+
+        homebtn = root.findViewById(R.id.fab_temp);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
 
         return root;
     }

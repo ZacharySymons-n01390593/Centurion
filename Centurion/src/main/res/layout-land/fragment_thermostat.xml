@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:background="@color/burgundy">
 
+        <!--Temperature control Label-->
         <TextView
             android:id="@+id/tempHead"
             android:layout_width="357dp"
@@ -25,6 +26,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.019" />
 
+        <!--Fan switch Label-->
         <TextView
             android:id="@+id/fantext2"
             android:layout_width="@dimen/imagewidth"
@@ -39,6 +41,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.21" />
 
+        <!--Temperature image-->
         <ImageView
             android:id="@+id/roomtemp"
             android:layout_width="@dimen/imagewidth"
@@ -51,6 +54,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.138" />
 
+        <!--Temperature reading-->
         <TextView
             android:id="@+id/TemperatureReading"
             android:layout_width="@dimen/textwidth"
@@ -65,6 +69,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.581" />
 
+        <!--Humidity reading-->
         <TextView
             android:id="@+id/HumidityReading"
             android:layout_width="@dimen/textwidth"
@@ -79,6 +84,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.581" />
 
+        <!--Humidity image-->
         <ImageView
             android:id="@+id/humidity"
             android:layout_width="@dimen/imagewidth"
@@ -91,6 +97,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.138" />
 
+        <!--Fan switch label-->
         <Switch
             android:id="@+id/fanSwitch"
             android:layout_width="@dimen/textwidth"
@@ -103,6 +110,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.384" />
 
+        <!--Desired temperature label-->
         <TextView
             android:id="@+id/fantext"
             android:layout_width="188dp"
@@ -118,6 +126,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.582" />
 
+        <!--Temp-limit up button-->
         <ImageButton
             android:id="@+id/increment"
             style="@style/Widget.AppCompat.Button.Borderless"
@@ -132,6 +141,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.913" />
 
+        <!--Desired temperature reading-->
         <TextView
             android:id="@+id/number"
             android:layout_width="@dimen/textwidth"
@@ -147,6 +157,7 @@
             app:layout_constraintVertical_bias="0.914"
             tools:text="0" />
 
+        <!--Temp-limit down button-->
         <ImageButton
             android:id="@+id/decrement"
             style="@style/Widget.AppCompat.Button.Borderless"
@@ -162,6 +173,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.913" />
 
+        <!--Desired temperature switch-->
         <Switch
             android:id="@+id/switch1"
             android:layout_width="wrap_content"

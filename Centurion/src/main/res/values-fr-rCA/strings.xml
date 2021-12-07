@@ -88,4 +88,5 @@
     <string name="project_name">Système de contrôle domestique Centurion</string>
     <string name="team_name">Centurion</string>
     <string name="user_id">User ID:</string>
+    <string name="greet">Thanks for your feedback!</string>
 </resources>

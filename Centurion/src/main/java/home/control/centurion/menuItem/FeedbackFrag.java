@@ -116,8 +116,7 @@ public class FeedbackFrag extends Fragment {
                 phoneNum.setText("");
                 comment.setText("");
                 email.setText("");
-                Toast.makeText(getContext(), "Thanks for your feedback!",
-                        Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), (R.string.greet), Toast.LENGTH_LONG).show();
             }
         });
 

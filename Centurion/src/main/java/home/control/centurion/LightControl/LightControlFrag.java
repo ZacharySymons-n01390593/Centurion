@@ -2,6 +2,7 @@
 package home.control.centurion.LightControl;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -18,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.IOException;
@@ -25,6 +27,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 
@@ -37,6 +40,7 @@ public class LightControlFrag extends Fragment {
     ImageView imageView = null;
     String strURL;
     Switch switchOn_Off = null;
+    private FloatingActionButton homebtn;
 
     public LightControlFrag() {
         // Required empty public constructor
@@ -54,6 +58,17 @@ public class LightControlFrag extends Fragment {
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.timerArray, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     mySpinner.setAdapter(adapter);
+
+        homebtn = root.findViewById(R.id.fab_light);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         switchOn_Off = (Switch) root.findViewById(R.id.switchLight);
         switchOn_Off.setOnClickListener(new View.OnClickListener() {

@@ -36,4 +36,6 @@
     <string name="temperature_control_temp">Temperature Control</string>
     <string name="home_drawerview">home</string>
     <string name="show_current_c02_level_btn">Show Current C02 Level</string>
+    <string name="user_id">User ID:</string>
+    <string name="greet">Thanks for your feedback!</string>
 </resources>

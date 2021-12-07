@@ -48,7 +48,7 @@ public class ThermostatFrag extends Fragment {
             public void onClick(View v) {
                 Snackbar snackbar = Snackbar.make(v,"Fan Toggled",Snackbar.LENGTH_LONG);
                 snackbar.setTextColor(Color.RED);
-                snackbar.show();
+                snackbar.show(); //display snackbar to tell user fan state has changed
             }
         });
 
@@ -57,7 +57,7 @@ public class ThermostatFrag extends Fragment {
             public void onClick(View v) {
                 Snackbar snackbar = Snackbar.make(v,"Desired Temperature Toggled",Snackbar.LENGTH_LONG);
                 snackbar.setTextColor(Color.RED);
-                snackbar.show();
+                snackbar.show();//display snackbar to let user know that the state has changed
             }
         });
 

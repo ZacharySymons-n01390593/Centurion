@@ -59,6 +59,14 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 saveData();
+                if (darkButton.isChecked()){
+                    AppCompatDelegate
+                            .setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                }
+                else{
+                    AppCompatDelegate
+                            .setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
             }
         });
         loadData();
@@ -97,14 +105,7 @@ public class SettingsFragment extends Fragment {
     public void updateViews() {
 
         darkButton.setChecked(switchOnOff);
-        if (darkButton.isChecked()){
-            AppCompatDelegate
-                    .setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        }
-        else{
-            AppCompatDelegate
-                    .setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
+
     }
 }
 

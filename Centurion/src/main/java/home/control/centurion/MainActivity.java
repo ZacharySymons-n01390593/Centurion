@@ -79,9 +79,6 @@ public class MainActivity extends AppCompatActivity {
                         mDrawerLayout.closeDrawers();
 
 
-                        // Add code here to update the UI based on the item selected
-                        // For example, swap UI fragments here
-                        //display in short period of time
                         Toast.makeText(getApplicationContext(), menuItem.getTitle(),
                                 Toast.LENGTH_LONG).show();
                         // Launch the corresponding fragment
@@ -154,9 +151,6 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.flContent, fragment);
         transaction.commit();
     }
-
-
-
 
 
 

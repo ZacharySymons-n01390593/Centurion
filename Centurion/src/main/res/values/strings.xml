@@ -101,6 +101,7 @@
     <string name="general_notifications">General Notifications</string>
     <string name="user_id">User ID:</string>
     <string name="greet">Thanks for your feedback!</string>
+    <string name="complete">Loading Complete</string>
 
 
 </resources>

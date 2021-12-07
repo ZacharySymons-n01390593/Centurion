@@ -124,34 +124,34 @@ public class FeedbackFrag extends Fragment {
                 phoneNum.setText("");
                 comment.setText("");
                 email.setText("");
-                Toast.makeText(getContext(), (R.string.greet), Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), (R.string.greet), Toast.LENGTH_SHORT).show();
+                mProgressBar = root.findViewById(R.id.progressbar);
+                mLoadingText = root.findViewById(R.id.LoadingCompleteTextView);
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        while (mProgressStatus < 100){
+                            mProgressStatus++;
+                            android.os.SystemClock.sleep(50);
+                            mHandler.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    mProgressBar.setProgress(mProgressStatus);
+                                }
+                            });
+                        }
+                        mHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                mLoadingText.setVisibility(View.VISIBLE);
+                            }
+                        });
+                    }
+                }).start();
             }
         });
 
-        mProgressBar = root.findViewById(R.id.progressbar);
-//        mLoadingText = root.findViewById(R.id.LoadingCompleteTextView);
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (mProgressStatus < 100){
-                    mProgressStatus++;
-                    android.os.SystemClock.sleep(50);
-                    mHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mProgressBar.setProgress(mProgressStatus);
-                        }
-                    });
-                }
-                mHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        mLoadingText.setVisibility(View.VISIBLE);
-                    }
-                });
-            }
-        }).start();
 
         return root;
     }

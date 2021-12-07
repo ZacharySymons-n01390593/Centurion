@@ -2,12 +2,17 @@
 package home.control.centurion.ui.main;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
@@ -37,8 +42,35 @@ public class MainFragment extends Fragment {
         View root = inflater.inflate(R.layout.main_fragment, container, false);
 
 
+        if(!wifiConnection(this)){
+            new AlertDialog.Builder(getContext())
+                    .setIcon(android.R.drawable.btn_star)
+                    .setTitle("No Internet Connection")
+                    .setMessage("A Internet Connection was not found. Please come back when you have connection")
+                    .setPositiveButton(R.string.back_yes, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            System.exit(0);
+                        }
+                    })
+                    .show();
+        }
+
 
         return root;
+
+    }
+
+    private boolean wifiConnection(MainFragment mainFragment) {
+
+        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo wifiConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+
+        if(wifiConn != null && wifiConn.isConnected()){
+            return true;
+        } else {
+            return false;
+        }
 
     }
 

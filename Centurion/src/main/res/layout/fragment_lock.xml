@@ -12,6 +12,36 @@
 
 
     <TextView
+        android:id="@+id/latestAccessLabel2"
+        android:layout_width="236dp"
+        android:layout_height="38dp"
+
+        android:text="@string/user_id"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228" />
+
+    <TextView
+        android:id="@+id/latestAccessLabel3"
+        android:layout_width="236dp"
+        android:layout_height="38dp"
+
+        android:text="@string/user_id"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.282" />
+
+    <TextView
         android:id="@+id/lockLogo"
         android:layout_width="330dp"
         android:layout_height="129dp"
@@ -29,32 +59,18 @@
 
     <TextView
         android:id="@+id/latestAccessLabel"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
+        android:layout_width="236dp"
+        android:layout_height="38dp"
 
-        android:text="User ID:"
+        android:text="@string/user_id"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.234"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="237dp"
-        android:layout_height="65dp"
-
-        android:text="@string/randomNumber"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.224"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.252" />
+        app:layout_constraintVertical_bias="0.336" />
 
     <ImageButton
         android:id="@+id/lockBTN"

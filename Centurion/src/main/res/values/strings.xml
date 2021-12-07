@@ -99,6 +99,7 @@
     <string name="emergency_notifications">Emergency Notifications</string>
     <string name="toasts">Toasts</string>
     <string name="general_notifications">General Notifications</string>
+    <string name="user_id">User ID:</string>
 
 
 </resources>

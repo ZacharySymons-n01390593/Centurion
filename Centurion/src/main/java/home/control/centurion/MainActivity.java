@@ -45,25 +45,13 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
 
-    private View parentView;
-    private Button darkButton;
-    private TextView themeText, titletext;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-
-
-
+        //calls the splash screen fragment
         loadFragment(new MainFragment());
-
-
-
-
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
 
 
         ActionBar actionbar = getSupportActionBar();

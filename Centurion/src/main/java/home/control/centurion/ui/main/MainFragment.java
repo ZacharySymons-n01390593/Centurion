@@ -21,8 +21,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import home.control.centurion.MainActivity;
 import home.control.centurion.R;
@@ -43,7 +48,7 @@ public class MainFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.main_fragment, container, false);
-
+        TextView output = root.findViewById(R.id.User);
 
         if(!wifiConnection(this)){
             new AlertDialog.Builder(getContext())
@@ -58,7 +63,23 @@ public class MainFragment extends Fragment {
                     })
                     .show();
         }
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
 
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("RFID");
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //receive data from database
+                String reading = dataSnapshot.child("1-set").child("User").getValue().toString();
+                //update text fields for user.
+                output.setText(reading);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         return root;
 

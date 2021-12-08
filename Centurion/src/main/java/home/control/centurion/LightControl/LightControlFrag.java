@@ -2,22 +2,30 @@
 package home.control.centurion.LightControl;
 
 import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.TimePicker;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.IOException;
@@ -25,10 +33,11 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 
-public class LightControlFrag extends Fragment {
+public class LightControlFrag extends Fragment implements TimePickerDialog.OnTimeSetListener{
 
     URL ImageUrl;
     ProgressDialog p;
@@ -37,6 +46,8 @@ public class LightControlFrag extends Fragment {
     ImageView imageView = null;
     String strURL;
     Switch switchOn_Off = null;
+    TextView startTimeTv;
+    private FloatingActionButton homebtn;
 
     public LightControlFrag() {
         // Required empty public constructor
@@ -49,11 +60,22 @@ public class LightControlFrag extends Fragment {
         View root = inflater.inflate(R.layout.fragment_lightcontrol, container, false);
 
         imageView = (ImageView) root.findViewById(R.id.imageView2);
-
+        //Spinner initialization
         Spinner mySpinner = (Spinner) root.findViewById(R.id.spinner);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.timerArray, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     mySpinner.setAdapter(adapter);
+
+        homebtn = root.findViewById(R.id.fab_light);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         switchOn_Off = (Switch) root.findViewById(R.id.switchLight);
         switchOn_Off.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +84,17 @@ public class LightControlFrag extends Fragment {
                 On_Off(v);
             }
         });
+
+        startTimeTv = (TextView) root.findViewById(R.id.startTimeTv);
+        ImageButton startTimeBtn = (ImageButton) root.findViewById(R.id.startTimeBtn);
+        startTimeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment timePick = new TimePickFrag();
+                timePick.show(getActivity().getSupportFragmentManager(), "time pick start");
+            }
+        });
+
 
         return root;
     }
@@ -88,12 +121,15 @@ public class LightControlFrag extends Fragment {
             snackbar.setTextColor(Color.RED);
             snackbar.show();
         }
-
-
-
-
-
     }
+
+
+
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+        startTimeTv.setText(hourOfDay + ":" + minute);
+    }
+
 
     private class AsyncTaskExample extends AsyncTask<String, String, Bitmap> {
 

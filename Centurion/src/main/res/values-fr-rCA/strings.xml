@@ -87,6 +87,11 @@
     <string name="change_app_theme">changer le thème de lapplication</string>
     <string name="project_name">Système de contrôle domestique Centurion</string>
     <string name="team_name">Centurion</string>
-    <string name="user_id">User ID:</string>
-    <string name="greet">Thanks for your feedback!</string>
+    <string name="emergency_notifications">Notifications Durgence</string>
+    <string name="toasts">Toasts</string>
+    <string name="general_notifications">General Notifications</string>
+    <string name="user_id">Identifiant dutilisateur:</string>
+    <string name="greet">Merci pour vos commentaires!</string>
+    <string name="complete">Chargement terminé</string>
+    <string name="centurion_home_control">Contrôle de la maison Centurion</string>
 </resources>

@@ -102,6 +102,7 @@
     <string name="user_id">User ID:</string>
     <string name="greet">Thanks for your feedback!</string>
     <string name="complete">Loading Complete</string>
+    <string name="latest_rfid">Latest RFID</string>
     <string name="centurion_home_control">Centurion Home Control</string>
 
 

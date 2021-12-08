@@ -52,7 +52,7 @@ public class ThermostatFrag extends Fragment {
 
         number.setText(""+temp);
 
-        reff = FirebaseDatabase.getInstance().getReference().child("Member");
+        reff = FirebaseDatabase.getInstance().getReference().child("TemperatureHumidity");
         reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

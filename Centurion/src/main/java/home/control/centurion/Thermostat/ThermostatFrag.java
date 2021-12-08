@@ -41,6 +41,7 @@ public class ThermostatFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_thermostat, container, false);
+            //declare all layout variables suchas image buttons switches and textviews
         ImageButton increment = root.findViewById(R.id.increment);
         ImageButton decrement = root.findViewById(R.id.decrement);
         Switch FanToggle = root.findViewById(R.id.fanSwitch);
@@ -61,7 +62,7 @@ public class ThermostatFrag extends Fragment {
                 String humidReading = dataSnapshot.child("Humidity Reading").getValue().toString();
 
                 tReading.setText(tempReading);
-                hReading.setText(humidReading);
+                hReading.setText(humidReading); // update texviews humidity and temperature
 
             }
 
@@ -97,7 +98,7 @@ public class ThermostatFrag extends Fragment {
 
                 if (FanDTempToggle.isChecked()) {
                 temp = Integer.parseInt(number.getText().toString().trim());
-                if (temp < 50)
+                if (temp < 50) //requested temp upper limit
                     temp++;
                 number.setText("" + temp);
                 }
@@ -110,7 +111,7 @@ public class ThermostatFrag extends Fragment {
                     public void onClick(View view) {
                         if(FanDTempToggle.isChecked()) {
                             temp = Integer.parseInt(number.getText().toString());
-                            if (temp > 0)
+                            if (temp > 0) //requested temp lower limit
                                 temp--;
                             number.setText("" + temp);
                         }

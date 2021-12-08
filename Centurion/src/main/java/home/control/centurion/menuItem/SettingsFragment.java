@@ -64,11 +64,11 @@ public class SettingsFragment extends Fragment {
 
                 if (darkButton.isChecked()){
                     AppCompatDelegate
-                            .setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                            .setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES); //set dark mode on
                 }
                 else{
                     AppCompatDelegate
-                            .setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                            .setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); //set dark mode off
                 }
 
 

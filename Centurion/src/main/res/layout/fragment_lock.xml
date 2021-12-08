@@ -30,8 +30,6 @@
         android:id="@+id/latestAccessLabel3"
         android:layout_width="236dp"
         android:layout_height="38dp"
-
-
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"

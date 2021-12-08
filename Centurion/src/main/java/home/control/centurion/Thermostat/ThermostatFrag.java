@@ -41,7 +41,7 @@ public class ThermostatFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_thermostat, container, false);
-
+            //declare all layout variables suchas image buttons switches and textviews
         ImageButton increment = root.findViewById(R.id.increment);
         ImageButton decrement = root.findViewById(R.id.decrement);
         Switch FanToggle = root.findViewById(R.id.fanSwitch);

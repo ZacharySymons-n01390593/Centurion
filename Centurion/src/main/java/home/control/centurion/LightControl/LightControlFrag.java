@@ -91,9 +91,11 @@ public class LightControlFrag extends Fragment implements TimePickerDialog.OnTim
             @Override
             public void onClick(View v) {
                 DialogFragment timePick = new TimePickFrag();
-                timePick.show(getActivity().getSupportFragmentManager(),"time pick start");
+                timePick.show(getActivity().getSupportFragmentManager(), "time pick start");
             }
         });
+
+
         return root;
     }
 
@@ -120,6 +122,8 @@ public class LightControlFrag extends Fragment implements TimePickerDialog.OnTim
             snackbar.show();
         }
     }
+
+
 
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {

@@ -146,7 +146,7 @@ public class FeedbackFrag extends Fragment {
                         mHandler.post(new Runnable() {
                             @Override
                             public void run() {
-                                mLoadingText.setVisibility(View.VISIBLE);
+                                mLoadingText.setVisibility(View.VISIBLE); //display text that loading is complete
                             }
                         });
                     }

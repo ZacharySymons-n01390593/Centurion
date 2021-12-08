@@ -41,6 +41,7 @@ public class ThermostatFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_thermostat, container, false);
+
         ImageButton increment = root.findViewById(R.id.increment);
         ImageButton decrement = root.findViewById(R.id.decrement);
         Switch FanToggle = root.findViewById(R.id.fanSwitch);
@@ -61,7 +62,7 @@ public class ThermostatFrag extends Fragment {
                 String humidReading = dataSnapshot.child("Humidity Reading").getValue().toString();
 
                 tReading.setText(tempReading);
-                hReading.setText(humidReading);
+                hReading.setText(humidReading); // update texviews humidity and temperature
 
             }
 

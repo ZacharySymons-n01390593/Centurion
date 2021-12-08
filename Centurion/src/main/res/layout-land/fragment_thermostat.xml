@@ -12,6 +12,20 @@
         android:background="@color/burgundy">
 
         <!--Temperature control Label-->
+
+        <TextView
+            android:id="@+id/temp_symbol"
+            android:layout_width="@dimen/textwidth"
+            android:layout_height="@dimen/textheight"
+            android:text="°C"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.223"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.581" />
+
         <TextView
             android:id="@+id/tempHead"
             android:layout_width="357dp"
@@ -55,36 +69,49 @@
             app:layout_constraintVertical_bias="0.138" />
 
         <!--Temperature reading-->
+
+        <!--Humidity reading-->
         <TextView
             android:id="@+id/TemperatureReading"
             android:layout_width="@dimen/textwidth"
             android:layout_height="@dimen/textheight"
-            android:text="@string/temperaturereading"
             android:textAlignment="center"
             android:textSize="@dimen/textsize"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.127"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.581" />
-
-        <!--Humidity reading-->
-        <TextView
-            android:id="@+id/HumidityReading"
-            android:layout_width="@dimen/textwidth"
-            android:layout_height="@dimen/textheight"
-            android:text="@string/humidityreading"
-            android:textAlignment="center"
-            android:textSize="@dimen/textsize"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.873"
+            app:layout_constraintHorizontal_bias="0.082"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.581" />
 
         <!--Humidity image-->
+
+        <TextView
+            android:id="@+id/HumidityReading"
+            android:layout_width="@dimen/textwidth"
+            android:layout_height="@dimen/textheight"
+            android:textAlignment="center"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.798"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.581" />
+
+        <TextView
+            android:id="@+id/humid_symbol"
+            android:layout_width="@dimen/textwidth"
+            android:layout_height="@dimen/textheight"
+            android:text="%"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.939"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.581" />
+
         <ImageView
             android:id="@+id/humidity"
             android:layout_width="@dimen/imagewidth"

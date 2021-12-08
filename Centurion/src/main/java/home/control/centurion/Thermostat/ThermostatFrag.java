@@ -98,7 +98,7 @@ public class ThermostatFrag extends Fragment {
 
                 if (FanDTempToggle.isChecked()) {
                 temp = Integer.parseInt(number.getText().toString().trim());
-                if (temp < 50)
+                if (temp < 50) //requested temp upper limit
                     temp++;
                 number.setText("" + temp);
                 }
@@ -111,7 +111,7 @@ public class ThermostatFrag extends Fragment {
                     public void onClick(View view) {
                         if(FanDTempToggle.isChecked()) {
                             temp = Integer.parseInt(number.getText().toString());
-                            if (temp > 0)
+                            if (temp > 0) //requested temp lower limit
                                 temp--;
                             number.setText("" + temp);
                         }

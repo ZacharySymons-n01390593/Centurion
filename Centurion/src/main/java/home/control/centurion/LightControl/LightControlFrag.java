@@ -110,7 +110,7 @@ public class LightControlFrag extends Fragment implements TimePickerDialog.OnTim
 
         }
         if (switchOn_Off.isChecked()){
-            AsyncTaskExample asyncTask2=new AsyncTaskExample();
+            AsyncTaskExample asyncTask2=new AsyncTaskExample(); //create async task object
             strURL = "https://cdn-icons-png.flaticon.com/512/702/702797.png"; //pass string of URL to async task to download image
             asyncTask2.execute(strURL);
 
@@ -149,7 +149,7 @@ public class LightControlFrag extends Fragment implements TimePickerDialog.OnTim
                 conn.connect();
                 is = conn.getInputStream();
 
-                BitmapFactory.Options options = new BitmapFactory.Options();
+                BitmapFactory.Options options = new BitmapFactory.Options();//create bitmap
                 options.inPreferredConfig = Bitmap.Config.RGB_565;
                 bmImg = BitmapFactory.decodeStream(is, null, options);
 

@@ -40,7 +40,7 @@
         android:id="@+id/currentUser"
         android:layout_width="230dp"
         android:layout_height="53dp"
-        android:text="@string/latest_rfid"
+        android:text="test"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="20sp"
@@ -51,6 +51,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.78" />
 
+    <!---->
     <TextView
         android:id="@+id/User"
         android:layout_width="211dp"
@@ -65,6 +66,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.787" />
 
+    <!--Digital clock time-->
     <DigitalClock
         android:id="@+id/digitalClock"
         android:layout_width="321dp"

@@ -60,6 +60,9 @@ public class ThermostatFrag extends Fragment {
                 String tempReading = dataSnapshot.child("Temperature Reading").getValue().toString();
                 String humidReading = dataSnapshot.child("Humidity Reading").getValue().toString();
 
+                tReading.setText(tempReading);
+                hReading.setText(humidReading);
+
             }
 
             @Override

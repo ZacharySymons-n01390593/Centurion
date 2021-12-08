@@ -125,6 +125,8 @@ public class FeedbackFrag extends Fragment {
                 comment.setText("");
                 email.setText("");
                 Toast.makeText(getContext(), (R.string.greet), Toast.LENGTH_SHORT).show();
+
+                //implementing a loading progress bar for the submission to database
                 mProgressBar = root.findViewById(R.id.progressbar);
                 mLoadingText = root.findViewById(R.id.LoadingCompleteTextView);
                 new Thread(new Runnable() {
@@ -132,6 +134,7 @@ public class FeedbackFrag extends Fragment {
                     public void run() {
                         while (mProgressStatus < 100){
                             mProgressStatus++;
+                            //how much time the progress bar will take
                             android.os.SystemClock.sleep(50);
                             mHandler.post(new Runnable() {
                                 @Override
@@ -143,7 +146,7 @@ public class FeedbackFrag extends Fragment {
                         mHandler.post(new Runnable() {
                             @Override
                             public void run() {
-                                mLoadingText.setVisibility(View.VISIBLE);
+                                mLoadingText.setVisibility(View.VISIBLE); //display text that loading is complete
                             }
                         });
                     }

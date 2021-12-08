@@ -10,7 +10,7 @@
     android:backgroundTint="@color/burgundy"
     tools:context=".CarbonMonoxide.CarbonMonoxideFrag">
 
-
+    <!--User ID value-->
     <TextView
         android:id="@+id/lockLogo"
         android:layout_width="330dp"
@@ -29,7 +29,7 @@
 
 
 
-
+    <!--Lock image-->
     <ImageButton
         android:id="@+id/lockBTN"
         style="?android:attr/borderlessButtonStyle"
@@ -43,6 +43,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <!--Lock state value-->
     <TextView
         android:id="@+id/lockTV"
         android:layout_width="271dp"
@@ -56,6 +57,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.935" />
 
+    <!--Lock state label-->
     <TextView
         android:layout_width="152dp"
         android:layout_height="36dp"
@@ -68,6 +70,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.89" />
 
+    <!--RFID image-->
     <ImageView
         android:layout_width="166dp"
         android:layout_height="104dp"
@@ -79,6 +82,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.55" />
 
+    <!--User ID value-->
     <TextView
         android:id="@+id/latestAccessLabel2"
         android:layout_width="236dp"
@@ -92,6 +96,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.083" />
 
+    <!--User name value-->
     <TextView
         android:id="@+id/latestAccessLabel3"
         android:layout_width="236dp"
@@ -105,6 +110,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.184" />
 
+    <!--Access value-->
     <TextView
         android:id="@+id/latestAccessLabel"
         android:layout_width="236dp"

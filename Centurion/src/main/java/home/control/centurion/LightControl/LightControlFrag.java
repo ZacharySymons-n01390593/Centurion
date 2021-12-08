@@ -70,7 +70,7 @@ public class LightControlFrag extends Fragment implements TimePickerDialog.OnTim
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
+                Intent intent = new Intent(getContext(), MainActivity.class); // home action button intent
                 startActivity(intent);
             }
         });
@@ -91,11 +91,9 @@ public class LightControlFrag extends Fragment implements TimePickerDialog.OnTim
             @Override
             public void onClick(View v) {
                 DialogFragment timePick = new TimePickFrag();
-                timePick.show(getActivity().getSupportFragmentManager(), "time pick start");
+                timePick.show(getFragmentManager(), "time pick start");
             }
         });
-
-
         return root;
     }
 

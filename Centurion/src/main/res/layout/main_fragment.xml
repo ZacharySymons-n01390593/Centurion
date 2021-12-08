@@ -39,6 +39,11 @@
         app:layout_constraintVertical_bias="0.025" />
 
     <!--latest Rfid Reading-->
+
+    <!--Zachary Name-->
+
+    <!--Digital clock time-->
+
     <TextView
         android:id="@+id/currentUser"
         android:layout_width="230dp"
@@ -46,30 +51,28 @@
         android:text="@string/latest_rfid"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        app:layout_constraintVertical_bias="0.716" />
 
-    <!--Zachary Name-->
     <TextView
         android:id="@+id/User"
-        android:layout_width="211dp"
-        android:layout_height="59dp"
+        android:layout_width="266dp"
+        android:layout_height="47dp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintHorizontal_bias="0.889"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.787" />
+        app:layout_constraintVertical_bias="0.76" />
 
-    <!--Digital clock time-->
     <DigitalClock
         android:id="@+id/digitalClock"
         android:layout_width="321dp"

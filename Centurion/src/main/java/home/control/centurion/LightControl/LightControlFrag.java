@@ -2,6 +2,7 @@
 package home.control.centurion.LightControl;
 
 import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,12 +10,15 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -77,6 +81,9 @@ public class LightControlFrag extends Fragment {
                 On_Off(v);
             }
         });
+
+
+        ImageButton startTimeBtn = (ImageButton) root.findViewById(R.id.startTimeBtn);
 
         return root;
     }

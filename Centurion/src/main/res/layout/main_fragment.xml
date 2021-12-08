@@ -10,21 +10,21 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="278dp"
-        android:layout_height="203dp"
+        android:layout_width="280dp"
+        android:layout_height="205dp"
         android:src="@drawable/helmet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.31" />
 
     <TextView
         android:id="@+id/titlePage"
-        android:layout_width="382dp"
-        android:layout_height="76dp"
-        android:text="@string/team_name"
+        android:layout_width="390dp"
+        android:layout_height="154dp"
+        android:text="Centurion Home Control "
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="50sp"
@@ -45,10 +45,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448">
+        app:layout_constraintVertical_bias="0.962">
 
     </DigitalClock>
 

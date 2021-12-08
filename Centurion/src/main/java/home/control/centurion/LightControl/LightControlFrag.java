@@ -22,6 +22,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.TimePicker;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -35,7 +37,7 @@ import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 
-public class LightControlFrag extends Fragment {
+public class LightControlFrag extends Fragment implements TimePickerDialog.OnTimeSetListener {
 
     URL ImageUrl;
     ProgressDialog p;
@@ -44,6 +46,7 @@ public class LightControlFrag extends Fragment {
     ImageView imageView = null;
     String strURL;
     Switch switchOn_Off = null;
+    TextView startTimeTv;
     private FloatingActionButton homebtn;
 
     public LightControlFrag() {
@@ -82,9 +85,15 @@ public class LightControlFrag extends Fragment {
             }
         });
 
-
+        startTimeTv = (TextView) root.findViewById(R.id.startTimeTv);
         ImageButton startTimeBtn = (ImageButton) root.findViewById(R.id.startTimeBtn);
-
+        startTimeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment timePick = new TimePickFrag();
+                timePick.show(getFragmentManager(),"time pick start");
+            }
+        });
         return root;
     }
 
@@ -110,11 +119,11 @@ public class LightControlFrag extends Fragment {
             snackbar.setTextColor(Color.RED);
             snackbar.show();
         }
+    }
 
-
-
-
-
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+    startTimeTv.setText(hourOfDay + ":" + minute);
     }
 
     private class AsyncTaskExample extends AsyncTask<String, String, Bitmap> {

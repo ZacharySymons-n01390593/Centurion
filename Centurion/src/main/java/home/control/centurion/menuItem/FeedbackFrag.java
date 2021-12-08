@@ -1,5 +1,6 @@
 package home.control.centurion.menuItem;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -16,6 +17,8 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ProgressBar;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,7 +39,7 @@ public class FeedbackFrag extends Fragment {
     RatingBar ratingBar;
     float rateValue;
     String temp;
-
+    private FloatingActionButton homebtn;
     private ProgressBar mProgressBar;
     private TextView mLoadingText;
 
@@ -154,7 +157,14 @@ public class FeedbackFrag extends Fragment {
             }
         });
 
-
+        homebtn = root.findViewById(R.id.fab_feedback);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return root;
     }

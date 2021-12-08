@@ -24,7 +24,7 @@
         android:id="@+id/titlePage"
         android:layout_width="390dp"
         android:layout_height="154dp"
-        android:text="Centurion Home Control "
+        android:text="@string/centurion_home_control"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="50sp"

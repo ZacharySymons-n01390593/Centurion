@@ -113,6 +113,7 @@ public class FeedbackFrag extends Fragment {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // uploading answers to database
                 myRef.child("Users").child(name.getText().toString()).child("email").setValue(email.getText().toString());
                 myRef.child("Users").child(name.getText().toString()).child("feedback").setValue(comment.getText().toString());
                 myRef.child("Users").child(name.getText().toString()).child("name").setValue(name.getText().toString());

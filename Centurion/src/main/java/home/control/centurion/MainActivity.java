@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity{
                         Toast.makeText(getApplicationContext(), menuItem.getTitle(),
                                 Toast.LENGTH_LONG).show();
                         // Launch the corresponding fragment
+                        //switch case checks  which fragment ot navigate to
                         Fragment fragment = null;
                         Class fragmentClass = null;
                         switch (menuItem.getItemId()) {
@@ -150,9 +151,6 @@ public class MainActivity extends AppCompatActivity{
         });
 */
     }
-
-
-
 
 
 

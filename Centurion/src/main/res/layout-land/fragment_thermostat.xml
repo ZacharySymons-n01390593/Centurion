@@ -11,8 +11,8 @@
         android:layout_height="match_parent"
         android:background="@color/burgundy">
 
-        <!--Temperature control Label-->
 
+        <!--Temperature symbol-->
         <TextView
             android:id="@+id/temp_symbol"
             android:layout_width="@dimen/textwidth"
@@ -26,6 +26,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.581" />
 
+        <!--Temperature control Label-->
         <TextView
             android:id="@+id/tempHead"
             android:layout_width="357dp"
@@ -69,8 +70,6 @@
             app:layout_constraintVertical_bias="0.138" />
 
         <!--Temperature reading-->
-
-        <!--Humidity reading-->
         <TextView
             android:id="@+id/TemperatureReading"
             android:layout_width="@dimen/textwidth"
@@ -84,8 +83,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.581" />
 
-        <!--Humidity image-->
-
+        <!--Humidity reading-->
         <TextView
             android:id="@+id/HumidityReading"
             android:layout_width="@dimen/textwidth"
@@ -99,6 +97,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.581" />
 
+        <!--Humidity symbol-->
         <TextView
             android:id="@+id/humid_symbol"
             android:layout_width="@dimen/textwidth"
@@ -112,6 +111,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.581" />
 
+        <!--Humidity image-->
         <ImageView
             android:id="@+id/humidity"
             android:layout_width="@dimen/imagewidth"

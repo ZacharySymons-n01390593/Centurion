@@ -4,6 +4,7 @@ package home.control.centurion.Thermostat;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,6 +15,11 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.NumberFormat;
 
@@ -25,7 +31,7 @@ public class ThermostatFrag extends Fragment {
     //DRY principle used as the increments and decrements are independent
 
     static int temp= 21;
-
+    DatabaseReference reff;
     public ThermostatFrag() {
         // Required empty public constructor
     }
@@ -40,7 +46,27 @@ public class ThermostatFrag extends Fragment {
         Switch FanToggle = root.findViewById(R.id.fanSwitch);
         Switch FanDTempToggle = root.findViewById(R.id.switch1);
         TextView number = (TextView) root.findViewById(R.id.number);
+
+        TextView tReading = root.findViewById(R.id.TemperatureReading);
+        TextView hReading = root.findViewById(R.id.HumidityReading);
+
         number.setText(""+temp);
+
+        reff = FirebaseDatabase.getInstance().getReference().child("Member");
+        reff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                String tempReading = dataSnapshot.child("Temperature Reading").getValue().toString();
+                String humidReading = dataSnapshot.child("Humidity Reading").getValue().toString();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
 
         FanToggle.setOnClickListener(new View.OnClickListener() {

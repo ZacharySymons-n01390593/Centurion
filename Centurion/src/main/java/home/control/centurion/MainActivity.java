@@ -199,10 +199,6 @@ public class MainActivity extends AppCompatActivity{
             case (R.id.settingsMenu):
                 loadFragment(new SettingsFragment());
                 return true;
-            case (R.id.help):
-                Intent intent3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=cueulBxn1Fw"));
-                startActivity(intent3);
-                return true;
             case (R.id.feedback):
                 loadFragment(new FeedbackFrag());
                 return true;

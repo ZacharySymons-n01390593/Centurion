@@ -37,7 +37,8 @@ import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 
-public class LightControlFrag extends Fragment implements TimePickerDialog.OnTimeSetListener{
+public class LightControlFrag extends Fragment //implements TimePickerDialog.OnTimeSetListener
+ {
 
     URL ImageUrl;
     ProgressDialog p;
@@ -84,7 +85,7 @@ public class LightControlFrag extends Fragment implements TimePickerDialog.OnTim
                 On_Off(v);
             }
         });
-
+/*
         startTimeTv = (TextView) root.findViewById(R.id.startTimeTv);
         ImageButton startTimeBtn = (ImageButton) root.findViewById(R.id.startTimeBtn);
         startTimeBtn.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +95,8 @@ public class LightControlFrag extends Fragment implements TimePickerDialog.OnTim
                 timePick.show(getFragmentManager(), "time pick start");
             }
         });
+
+ */
         return root;
     }
 
@@ -122,12 +125,12 @@ public class LightControlFrag extends Fragment implements TimePickerDialog.OnTim
     }
 
 
-
+/*
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         startTimeTv.setText(hourOfDay + ":" + minute);
     }
-
+*/
 
     private class AsyncTaskExample extends AsyncTask<String, String, Bitmap> {
 

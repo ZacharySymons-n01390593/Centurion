@@ -22,6 +22,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.firebase.database.DatabaseReference;
+
 import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 import home.control.centurion.SplashActivity;
@@ -30,6 +32,7 @@ public class MainFragment extends Fragment {
 
     private MainViewModel mViewModel;
     static int i = 0;
+    private DatabaseReference databaseReference;
 
     public static MainFragment newInstance() {
         return new MainFragment();

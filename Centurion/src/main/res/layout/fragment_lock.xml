@@ -11,6 +11,12 @@
     tools:context=".CarbonMonoxide.CarbonMonoxideFrag">
 
     <!--User ID value-->
+
+
+    <!--User name value-->
+
+    <!--Lock control label-->
+
     <TextView
         android:id="@+id/latestAccessLabel2"
         android:layout_width="236dp"
@@ -21,12 +27,39 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintHorizontal_bias="0.994"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
+        app:layout_constraintVertical_bias="0.227" />
 
-    <!--User name value-->
+    <TextView
+        android:id="@+id/CardNum"
+        android:layout_width="236dp"
+        android:layout_height="38dp"
+        android:text="@string/card_id"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.226" />
+
+    <TextView
+        android:id="@+id/Person"
+        android:layout_width="236dp"
+        android:layout_height="38dp"
+        android:text="@string/user"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
+
     <TextView
         android:id="@+id/latestAccessLabel3"
         android:layout_width="236dp"
@@ -35,12 +68,11 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintHorizontal_bias="0.994"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.282" />
 
-    <!--Lock control label-->
     <TextView
         android:id="@+id/lockLogo"
         android:layout_width="330dp"
@@ -56,6 +88,8 @@
         app:layout_constraintVertical_bias="0.049" />
 
     <!--Access value-->
+
+    <!--Lock image-->
     <TextView
         android:id="@+id/latestAccessLabel"
         android:layout_width="236dp"
@@ -64,12 +98,11 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.336" />
 
-    <!--Lock image-->
     <ImageButton
         android:id="@+id/lockBTN"
         style="?android:attr/borderlessButtonStyle"

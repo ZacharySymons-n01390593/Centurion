@@ -95,4 +95,6 @@
     <string name="complete">Chargement terminé</string>
     <string name="latest_rfid">RFID: </string>
     <string name="centurion_home_control">Contrôle de la maison Centurion</string>
+    <string name="user">User:</string>
+    <string name="card_id">Card ID:</string>
 </resources>

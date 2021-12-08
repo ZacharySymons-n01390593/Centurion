@@ -40,4 +40,6 @@
     <string name="greet">Thanks for your feedback!</string>
     <string name="centurion_home_control">Centurion Home Control</string>
     <string name="complete">Loading Complete</string>
+    <string name="user">User:</string>
+    <string name="card_id">Card ID:</string>
 </resources>

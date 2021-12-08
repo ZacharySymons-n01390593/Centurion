@@ -35,12 +35,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.025" />
 
-
+    <!--latest Rfid Reading-->
     <TextView
         android:id="@+id/currentUser"
         android:layout_width="230dp"
         android:layout_height="53dp"
-        android:text="test"
+        android:text="@string/latest_rfid"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="20sp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.78" />
 
-    <!---->
+    <!--Zachary Name-->
     <TextView
         android:id="@+id/User"
         android:layout_width="211dp"

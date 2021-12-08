@@ -2,6 +2,7 @@
 package home.control.centurion.menuItem;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,8 +17,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
+import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 import home.control.centurion.ui.main.MainViewModel;
 
@@ -27,9 +30,8 @@ public class SettingsFragment extends Fragment {
     static int i = 0;
 
     private SwitchMaterial darkButton;
-    private TextView themeText, titletext;
     private Button saveButton;
-
+    private FloatingActionButton homebtn;
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String TEXT = "text";
     public static final String SWITCH1 = "switch1";
@@ -83,6 +85,17 @@ public class SettingsFragment extends Fragment {
             AppCompatDelegate
                     .setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
+
+        homebtn = root.findViewById(R.id.fab_settings);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         return root;
 

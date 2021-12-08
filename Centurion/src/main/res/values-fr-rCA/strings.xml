@@ -93,5 +93,6 @@
     <string name="user_id">Identifiant dutilisateur:</string>
     <string name="greet">Merci pour vos commentaires!</string>
     <string name="complete">Chargement terminé</string>
+    <string name="latest_rfid">RFID: </string>
     <string name="centurion_home_control">Contrôle de la maison Centurion</string>
 </resources>

@@ -84,9 +84,9 @@ public class MainActivity extends AppCompatActivity{
                         Fragment fragment = null;
                         Class fragmentClass = null;
                         switch (menuItem.getItemId()) {
-                            case R.id.nav_main:
-                                fragmentClass = MainFragment.class;
-                                break;
+//                            case R.id.nav_main:
+//                                fragmentClass = MainFragment.class;
+//                                break;
                             case R.id.nav_lock:
                                 fragmentClass = LockFrag.class;
                                 break;

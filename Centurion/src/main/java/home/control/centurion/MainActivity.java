@@ -2,7 +2,6 @@
 package home.control.centurion;
 
 
-import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,10 +11,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,7 +18,6 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
@@ -35,7 +29,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import home.control.centurion.CarbonMonoxide.CarbonMonoxideFrag;
 import home.control.centurion.LightControl.LightControlFrag;
-import home.control.centurion.LightControl.timePicker;
 import home.control.centurion.Lock.LockFrag;
 import home.control.centurion.Thermostat.ThermostatFrag;
 import home.control.centurion.menuItem.FeedbackFrag;

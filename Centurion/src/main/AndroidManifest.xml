@@ -16,7 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Centurion">
 
-
         <activity
             android:name=".MainActivity"
             android:exported="true"  >
@@ -25,6 +24,8 @@
 
 <!--            <category android:name="android.intent.category.DEFAULT" />-->
 <!--        </intent-filter>-->
+
+
         </activity>
 
 

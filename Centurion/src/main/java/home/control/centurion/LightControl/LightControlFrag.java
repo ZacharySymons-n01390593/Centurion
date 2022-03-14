@@ -76,8 +76,6 @@ public class LightControlFrag extends Fragment
             }
         });
 
-
-
         switchOn_Off = (Switch) root.findViewById(R.id.switchLight);
         switchOn_Off.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -2,23 +2,20 @@
 package home.control.centurion;
 
 
-import android.content.Context;
+import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 
-import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,15 +35,14 @@ import androidx.fragment.app.FragmentTransaction;
 
 import home.control.centurion.CarbonMonoxide.CarbonMonoxideFrag;
 import home.control.centurion.LightControl.LightControlFrag;
-import home.control.centurion.LightControl.TimePickFrag;
+import home.control.centurion.LightControl.timePicker;
 import home.control.centurion.Lock.LockFrag;
 import home.control.centurion.Thermostat.ThermostatFrag;
 import home.control.centurion.menuItem.FeedbackFrag;
-
 import home.control.centurion.menuItem.SettingsFragment;
 import home.control.centurion.ui.main.MainFragment;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
 
     private DrawerLayout mDrawerLayout;
@@ -140,6 +136,8 @@ public class MainActivity extends AppCompatActivity{
                 }
         );
 
+
+
     }
 
 
@@ -196,6 +194,7 @@ public class MainActivity extends AppCompatActivity{
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
 
 }

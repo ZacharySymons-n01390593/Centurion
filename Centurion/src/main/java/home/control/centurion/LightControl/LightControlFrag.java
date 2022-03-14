@@ -85,18 +85,7 @@ public class LightControlFrag extends Fragment
                 On_Off(v);
             }
         });
-/*
-        startTimeTv = (TextView) root.findViewById(R.id.startTimeTv);
-        ImageButton startTimeBtn = (ImageButton) root.findViewById(R.id.startTimeBtn);
-        startTimeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DialogFragment timePick = new TimePickFrag();
-                timePick.show(getFragmentManager(), "time pick start");
-            }
-        });
 
- */
         return root;
     }
 

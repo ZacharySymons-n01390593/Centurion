@@ -114,13 +114,6 @@ public class LightControlFrag extends Fragment
     }
 
 
-/*
-    @Override
-    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        startTimeTv.setText(hourOfDay + ":" + minute);
-    }
-*/
-
     private class AsyncTaskExample extends AsyncTask<String, String, Bitmap> {
 
         @Override

@@ -3,6 +3,7 @@ package home.control.centurion.LightControl;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -21,7 +22,7 @@ public class TimePickerActivity  extends AppCompatActivity implements TimePicker
         setContentView(R.layout.fragment_lightcontrol);
 
         //TimePicker requires a new activity
-        ImageButton startTimeBtn = (ImageButton) findViewById(R.id.startTimeBtn);
+       Button startTimeBtn = (Button) findViewById(R.id.stBtn);
         startTimeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,7 +1,7 @@
 //Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690)
 package home.control.centurion;
 
-import android.app.TimePickerDialog;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,7 +18,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.TimePicker;
+
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -48,7 +48,7 @@ import home.control.centurion.ui.main.MainFragment;
 
 public class MainActivity extends AppCompatActivity{
 
-    TextView startTimeTv;
+
     private DrawerLayout mDrawerLayout;
 
     @Override
@@ -139,17 +139,7 @@ public class MainActivity extends AppCompatActivity{
                     }
                 }
         );
-/*
-        startTimeTv = (TextView) findViewById(R.id.startTimeTv);
-        ImageButton startTimeBtn = (ImageButton) findViewById(R.id.startTimeBtn);
-        startTimeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DialogFragment timePick = new TimePickFrag();
-                timePick.show(getSupportFragmentManager(), "time pick start");
-            }
-        });
-*/
+
     }
 
 

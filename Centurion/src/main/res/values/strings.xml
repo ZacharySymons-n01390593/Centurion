@@ -106,5 +106,7 @@
     <string name="centurion_home_control">Centurion Home Control</string>
     <string name="user">User:</string>
     <string name="card_id">Card ID:</string>
+    <string name="switchOnLight">Light Switched On</string>
+    <string name="switchOffLight">Light Switched Off</string>
 
 </resources>

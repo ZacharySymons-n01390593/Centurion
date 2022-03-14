@@ -37,7 +37,7 @@ import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 
-public class LightControlFrag extends Fragment //implements TimePickerDialog.OnTimeSetListener
+public class LightControlFrag extends Fragment
  {
 
     URL ImageUrl;
@@ -107,7 +107,7 @@ public class LightControlFrag extends Fragment //implements TimePickerDialog.OnT
             AsyncTaskExample asyncTask1=new AsyncTaskExample();
             asyncTask1.execute(strURL);
 
-            Snackbar snackbar = Snackbar.make(v, "Light Switched On", Snackbar.LENGTH_LONG); //implement snackbar to let user know state of the light was updated
+            Snackbar snackbar = Snackbar.make(v, R.string.switchOffLight, Snackbar.LENGTH_LONG); //implement snackbar to let user know state of the light was updated
             snackbar.setTextColor(Color.RED);
             snackbar.show();
 
@@ -118,7 +118,7 @@ public class LightControlFrag extends Fragment //implements TimePickerDialog.OnT
             asyncTask2.execute(strURL);
 
 
-            Snackbar snackbar = Snackbar.make(v, "Light Switched Off", Snackbar.LENGTH_LONG);//implement snackbar to let user know state of the light was updated
+            Snackbar snackbar = Snackbar.make(v, R.string.switchOnLight, Snackbar.LENGTH_LONG);//implement snackbar to let user know state of the light was updated
             snackbar.setTextColor(Color.RED);
             snackbar.show();
         }

@@ -30,7 +30,7 @@ import home.control.centurion.R;
 public class TimePickerActivity extends AppCompatActivity {
 
     DatabaseReference reff;
-    DistanceSensor distanceSensorData;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,7 @@ public class TimePickerActivity extends AppCompatActivity {
         TextView startTimeTv = (TextView) findViewById(R.id.startTimeTv);
         TextView endTimeTv = (TextView) findViewById(R.id.endTimeTv);
         Button confirmBtn = (Button) findViewById(R.id.confirmBtn);
-        distanceSensorData = new DistanceSensor();
+
             reff = FirebaseDatabase.getInstance().getReference().child("DistanceSensor");
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,10 +48,10 @@ public class TimePickerActivity extends AppCompatActivity {
                 String start = startTimeTv.getText().toString();
                 String end = endTimeTv.getText().toString();
                 //save strings to object
-                distanceSensorData.setEndTime(end);
-                distanceSensorData.setStartTime(start);
+
                 //push object ot database
-                reff.push().setValue(distanceSensorData);
+                reff.child("StartTime").setValue(start);
+                reff.child("EndTime").setValue(end);
 
             }
         });

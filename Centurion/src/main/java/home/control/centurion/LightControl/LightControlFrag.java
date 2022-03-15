@@ -40,31 +40,21 @@ import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 
-public class LightControlFrag extends Fragment implements TimePickerDialog.OnTimeSetListener
+public class LightControlFrag extends Fragment
  {
 
     URL ImageUrl;
-    ProgressDialog p;
+
     InputStream is = null;
     Bitmap bmImg = null;
     ImageView imageView = null;
     String strURL;
     Switch switchOn_Off = null;
-    TextView startTimeTv;
+
     private FloatingActionButton homebtn;
      DatabaseReference reff;
      DistanceSensor distanceSensorData;
-    public LightControlFrag() {
-        // Required empty public constructor
-    }
 
-
-     @Override
-     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-         TextView startTimeTv = (TextView) view.findViewById(R.id.startTimeTv);
-       startTimeTv.setText(hourOfDay + ":" + minute);
-
-     }
 
      @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -103,12 +93,22 @@ public class LightControlFrag extends Fragment implements TimePickerDialog.OnTim
         startTimePick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment timePicker1 = new TimePickerFragment();
-                timePicker1.show(getFragmentManager(),"Time Picker");
+            //intent launch timepicker activity
+                Intent intent = new Intent(getContext(), TimePickerActivity.class);
+                startActivity(intent);
+                String time = getArguments().getString("time");
+                startTimeTv.setText(time);
+
             }
         });
 
-
+        endTimePick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), TimePickerActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -133,7 +133,9 @@ public class LightControlFrag extends Fragment implements TimePickerDialog.OnTim
         return root;
     }
 
-    public void On_Off(View v){
+
+
+     public void On_Off(View v){
 
         if (!switchOn_Off.isChecked()){
             strURL = "https://icon-library.com/images/light-off-icon/light-off-icon-23.jpg"; //pass string of URL to async task to download image

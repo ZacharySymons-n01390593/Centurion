@@ -2,6 +2,7 @@
 package home.control.centurion.LightControl;
 
 import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,17 +10,21 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -35,7 +40,7 @@ import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 
-public class LightControlFrag extends Fragment
+public class LightControlFrag extends Fragment implements TimePickerDialog.OnTimeSetListener
  {
 
     URL ImageUrl;
@@ -54,7 +59,14 @@ public class LightControlFrag extends Fragment
     }
 
 
-    @Override
+     @Override
+     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+         TextView startTimeTv = (TextView) view.findViewById(R.id.startTimeTv);
+       startTimeTv.setText(hourOfDay + ":" + minute);
+
+     }
+
+     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_lightcontrol, container, false);
@@ -82,8 +94,24 @@ public class LightControlFrag extends Fragment
                 On_Off(v);
             }
         });
+
+
         TextView startTimeTv = (TextView) root.findViewById(R.id.startTimeTv);
         TextView endTimeTv = (TextView) root.findViewById(R.id.endTimeTv);
+        ImageButton startTimePick = (ImageButton) root.findViewById(R.id.startTimeBtn);
+        ImageButton endTimePick = (ImageButton) root.findViewById(R.id.endTimeBtn);
+        startTimePick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment timePicker1 = new TimePickerFragment();
+                timePicker1.show(getFragmentManager(),"Time Picker");
+            }
+        });
+
+
+
+
+
         Button confirmBtn = (Button) root.findViewById(R.id.confirmBtn);
         distanceSensorData = new DistanceSensor();
         reff = FirebaseDatabase.getInstance().getReference().child("DistanceSensor");

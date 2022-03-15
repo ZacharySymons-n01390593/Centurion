@@ -14,6 +14,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,10 +95,13 @@ public class LightControlFrag extends Fragment
             @Override
             public void onClick(View v) {
             //intent launch timepicker activity
+
                 Intent intent = new Intent(getContext(), TimePickerActivity.class);
+                intent.putExtra("pick",0);
                 startActivity(intent);
-                String time = getArguments().getString("time");
-                startTimeTv.setText(time);
+
+
+
 
             }
         });
@@ -106,6 +110,7 @@ public class LightControlFrag extends Fragment
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), TimePickerActivity.class);
+                intent.putExtra("pick",1);
                 startActivity(intent);
             }
         });

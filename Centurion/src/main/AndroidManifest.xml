@@ -30,7 +30,8 @@
 
         </activity>
 
-        <activity android:name=".LightControl.TimePickerActivity">
+        <activity android:name=".LightControl.TimePickerActivity"
+            android:exported="true">
 
         </activity>
 

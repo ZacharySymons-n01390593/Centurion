@@ -15,6 +15,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import home.control.centurion.MainActivity;
 import home.control.centurion.R;
 
 public class TimePickerActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
@@ -29,17 +30,19 @@ public class TimePickerActivity extends AppCompatActivity implements TimePickerD
         DialogFragment timePicker1 = new TimePickerFragment();
         timePicker1.show(getSupportFragmentManager(), "Time Picker");
 
-        pick = getIntent().getIntExtra("pick",-1);
+        pick = getIntent().getIntExtra("case",-1);
+
+
     }
 
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        Intent i = getIntent();
+        setContentView(R.layout.fragment_lightcontrol);
         time = hourOfDay + ":" + minute;
 
         if (pick == 0) {
-            //TextView tv = (TextView) findViewById(R.id.startTimeTv);
-            //tv.setText(time);
+            TextView tv = (TextView) findViewById(R.id.startTimeTv);
+            tv.setText(time);
             Log.d(time, "time");
         }
     }

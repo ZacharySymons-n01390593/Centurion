@@ -97,7 +97,7 @@ public class LightControlFrag extends Fragment
             //intent launch timepicker activity
 
                 Intent intent = new Intent(getContext(), TimePickerActivity.class);
-                intent.putExtra("pick",0);
+                intent.putExtra("case",0);
                 startActivity(intent);
 
 
@@ -110,7 +110,7 @@ public class LightControlFrag extends Fragment
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), TimePickerActivity.class);
-                intent.putExtra("pick",1);
+                intent.putExtra("case",1);
                 startActivity(intent);
             }
         });
@@ -129,8 +129,7 @@ public class LightControlFrag extends Fragment
                 //save strings to object
                 distanceSensorData.setEndTime(end);
                 distanceSensorData.setStartTime(start);
-                //push object ot database
-                //reff.push().setValue(distanceSensorData);
+                //send object to database
                 reff.child("Time").setValue(distanceSensorData);
             }
         });

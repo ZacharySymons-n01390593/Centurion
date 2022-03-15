@@ -2,7 +2,6 @@
 package home.control.centurion.LightControl;
 
 import android.app.ProgressDialog;
-import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,7 +9,6 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -18,15 +16,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -49,7 +47,8 @@ public class LightControlFrag extends Fragment
     Switch switchOn_Off = null;
     TextView startTimeTv;
     private FloatingActionButton homebtn;
-
+     DatabaseReference reff;
+     DistanceSensor distanceSensorData;
     public LightControlFrag() {
         // Required empty public constructor
     }
@@ -83,6 +82,25 @@ public class LightControlFrag extends Fragment
                 On_Off(v);
             }
         });
+        TextView startTimeTv = (TextView) root.findViewById(R.id.startTimeTv);
+        TextView endTimeTv = (TextView) root.findViewById(R.id.endTimeTv);
+        Button confirmBtn = (Button) root.findViewById(R.id.confirmBtn);
+        distanceSensorData = new DistanceSensor();
+        reff = FirebaseDatabase.getInstance().getReference().child("DistanceSensor");
+        confirmBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //get string from ui
+                String start = startTimeTv.getText().toString();
+                String end = endTimeTv.getText().toString();
+                //save strings to object
+                distanceSensorData.setEndTime(end);
+                distanceSensorData.setStartTime(start);
+                //push object ot database
+                //reff.push().setValue(distanceSensorData);
+                reff.child("Time").setValue(distanceSensorData);
+            }
+        });
 
         return root;
     }
@@ -91,7 +109,7 @@ public class LightControlFrag extends Fragment
 
         if (!switchOn_Off.isChecked()){
             strURL = "https://icon-library.com/images/light-off-icon/light-off-icon-23.jpg"; //pass string of URL to async task to download image
-            AsyncTaskExample asyncTask1=new AsyncTaskExample();
+            AsyncFrag asyncTask1=new AsyncFrag();
             asyncTask1.execute(strURL);
 
             Snackbar snackbar = Snackbar.make(v, R.string.switchOffLight, Snackbar.LENGTH_LONG); //implement snackbar to let user know state of the light was updated
@@ -100,7 +118,7 @@ public class LightControlFrag extends Fragment
 
         }
         if (switchOn_Off.isChecked()){
-            AsyncTaskExample asyncTask2=new AsyncTaskExample(); //create async task object
+            AsyncFrag asyncTask2=new AsyncFrag(); //create async task object
             strURL = "https://cdn-icons-png.flaticon.com/512/702/702797.png"; //pass string of URL to async task to download image
             asyncTask2.execute(strURL);
 
@@ -112,7 +130,7 @@ public class LightControlFrag extends Fragment
     }
 
 
-    private class AsyncTaskExample extends AsyncTask<String, String, Bitmap> {
+    private class AsyncFrag extends AsyncTask<String, String, Bitmap> {
 
         @Override
         protected void onPreExecute() {

@@ -69,8 +69,8 @@ public class LightControlFrag extends Fragment
 
         imageView = (ImageView) root.findViewById(R.id.imageView2);
 
-        DataSnapshot dataSnapshot = null;
-         reff = FirebaseDatabase.getInstance().getReference().child("DistanceSensor");
+
+        reff = FirebaseDatabase.getInstance().getReference().child("DistanceSensor").child("Detected");
         reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

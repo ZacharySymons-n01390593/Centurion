@@ -58,8 +58,8 @@ public class ThermostatFrag extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                String tempReading = dataSnapshot.child("readings").child("Temperature Reading").getValue().toString();
-                String humidReading = dataSnapshot.child("readings").child("Humidity Reading").getValue().toString();
+                String tempReading = dataSnapshot.child("Temperature Reading").getValue().toString();
+                String humidReading = dataSnapshot.child("Humidity Reading").getValue().toString();
 
                 tReading.setText(tempReading);
                 hReading.setText(humidReading); // update texviews humidity and temperature

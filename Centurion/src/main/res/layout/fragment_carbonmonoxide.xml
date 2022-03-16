@@ -13,52 +13,20 @@
 
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="@dimen/textwidth"
-        android:layout_height="@dimen/textheight"
-        android:textAlignment="center"
-        android:background="#FF9800"
-        android:text="@string/unhealthy_carbon_txtview"
-        android:textStyle="bold"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.644"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.674" />
-
-    <TextView
         android:id="@+id/textView10"
         android:layout_width="@dimen/textwidth"
         android:layout_height="@dimen/textheight"
-        android:textAlignment="center"
         android:background="#ED4F1D"
         android:text="@string/hazardous_carbon_txtview"
-        android:textStyle="bold"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.925"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.674" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="@dimen/textwidth"
-        android:layout_height="@dimen/textheight"
         android:textAlignment="center"
-        android:background="#FFEB3B"
-        android:text="@string/moderate_carbon_txtview"
-        android:textStyle="bold"
         android:textSize="15dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintHorizontal_bias="0.632"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.674" />
+        app:layout_constraintVertical_bias="0.675" />
 
     <TextView
         android:id="@+id/textViewSafeC02"
@@ -72,10 +40,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.352"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.674" />
+        app:layout_constraintVertical_bias="0.675" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/emergencyBtn"
@@ -113,6 +81,7 @@
         android:layout_width="@dimen/placeholderwidth"
         android:layout_height="@dimen/placeholderheight"
         android:text="@string/placeholder_carbon"
+        android:textSize="20dp"
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

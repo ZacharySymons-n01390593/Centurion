@@ -117,38 +117,38 @@
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/switchLight" />
 
-    <TextView
-        android:id="@+id/startTime"
-        android:layout_width="81dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="52dp"
-        android:textAlignment="center"
-        android:textColor="#000000"
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="308dp"
+        android:text="Confirm Selected \n Time's"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerStartHour" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/endTime"
         android:layout_width="81dp"
         android:layout_height="29dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="80dp"
         android:textAlignment="center"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/spinnerEndHour"
         app:layout_constraintTop_toBottomOf="@+id/spinnerEndMin" />
 
-    <Button
-        android:id="@+id/confirmBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
-        android:text="Confirm Selected \n Time's"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="81dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="80dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerStartHour" />
 
     <Spinner
         android:id="@+id/spinnerStartHour"
@@ -185,10 +185,61 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/spinnerEndHour" />
 
+
     <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="524dp" />
+        android:id="@+id/start_am_pm"
+        android:layout_width="54dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerStartHour">
+
+        <RadioButton
+            android:id="@+id/startAmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:checked="true"
+
+            android:text="AM" />
+
+        <RadioButton
+            android:id="@+id/startPmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+
+            android:text="PM" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/end_am_pm"
+        android:layout_width="54dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/spinnerEndHour"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerStartHour" >
+
+        <RadioButton
+            android:id="@+id/endAmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:checked="true"
+
+            android:text="AM" />
+
+        <RadioButton
+            android:id="@+id/endPmBtn"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+
+            android:text="PM" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/dateDetectedTv"
+        android:layout_width="150dp"
+        android:layout_height="43dp"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="582dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

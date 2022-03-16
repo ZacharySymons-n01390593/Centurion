@@ -8,8 +8,10 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,14 +19,21 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,7 +48,6 @@ public class LightControlFrag extends Fragment
  {
 
     URL ImageUrl;
-
     InputStream is = null;
     Bitmap bmImg = null;
     ImageView imageView = null;
@@ -50,13 +58,33 @@ public class LightControlFrag extends Fragment
      DatabaseReference reff;
 
 
-
+    RadioGroup radioGroup1;
+    RadioGroup radioGroup2;
+    RadioButton radioButton1;
+    RadioButton radioButton2;
      @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_lightcontrol, container, false);
 
         imageView = (ImageView) root.findViewById(R.id.imageView2);
+
+        DataSnapshot dataSnapshot = null;
+         reff = FirebaseDatabase.getInstance().getReference().child("DistanceSensor");
+        reff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String lastDetected = dataSnapshot.child("Date_Time").getValue() + " " +  dataSnapshot.child("Distance").getValue();
+                TextView tv = root.findViewById(R.id.dateDetectedTv);
+                tv.setText(lastDetected);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         //Spinner initialization
 
          Spinner Dur = (Spinner) root.findViewById(R.id.spinnerDur);
@@ -81,8 +109,6 @@ public class LightControlFrag extends Fragment
          Spinner endMin = (Spinner) root.findViewById(R.id.spinnerEndMin);
          endMin.setAdapter(adapterMins);
 
-
-
          homebtn = root.findViewById(R.id.fab_light);
 
         homebtn.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +127,6 @@ public class LightControlFrag extends Fragment
             }
         });
 
-
         TextView startTimeTv = (TextView) root.findViewById(R.id.startTime);
         TextView endTimeTv = (TextView) root.findViewById(R.id.endTime);
         ImageButton startTimePick = (ImageButton) root.findViewById(R.id.startTimeBtn);
@@ -109,14 +134,24 @@ public class LightControlFrag extends Fragment
 
         Button confirmBtn = (Button) root.findViewById(R.id.confirmBtn);
 
-        reff = FirebaseDatabase.getInstance().getReference().child("DistanceSensor");
+
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //get string from ui
+                radioGroup1 = root.findViewById(R.id.start_am_pm);
+                radioGroup2 = root.findViewById(R.id.end_am_pm);
 
-                String start = startHour.getSelectedItem().toString() + ":" +startMin.getSelectedItem().toString();
-                String end = endHour.getSelectedItem().toString() + ":" + endMin.getSelectedItem().toString();
+                int radioId1 = radioGroup1.getCheckedRadioButtonId();
+                int radioId2 = radioGroup2.getCheckedRadioButtonId();
+
+                radioButton1 =  root.findViewById(radioId1);
+                radioButton2 =  root.findViewById(radioId2);
+
+                String start = startHour.getSelectedItem().toString() + ":" +startMin.getSelectedItem().toString() + " " + radioButton1.getText();
+                String end = endHour.getSelectedItem().toString() + ":" + endMin.getSelectedItem().toString() + " " + radioButton2.getText();
+                startTimeTv.setText(start);
+                endTimeTv.setText(end);
                 String dur = Dur.getSelectedItem().toString();
 
 

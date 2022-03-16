@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/burgundy">
+    android:background="@color/burgundy"
+    android:id="@+id/lightControl">
 
 
     <Switch
@@ -22,11 +23,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="124dp"
         android:text="@string/light_schedule"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switchLight" />
 
@@ -34,53 +35,24 @@
         android:id="@+id/textView3"
         android:layout_width="@dimen/textwidth"
         android:layout_height="@dimen/textheight"
-        android:layout_marginEnd="108dp"
+        android:layout_marginEnd="72dp"
         android:gravity="center"
         android:text="@string/end_time"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView" />
 
-    <ImageButton
-        android:id="@+id/endTimeBtn"
-        android:layout_width="81dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="4dp"
-        android:adjustViewBounds="true"
-        android:backgroundTint="@color/burgundy"
-        android:contentDescription="@string/clock_icon"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:srcCompat="@drawable/clock" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="@dimen/textwidth"
         android:layout_height="@dimen/textheight"
-        android:layout_marginStart="108dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="@string/start_time"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <ImageButton
-        android:id="@+id/startTimeBtn"
-        android:layout_width="81dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="8dp"
-        android:adjustViewBounds="true"
-        android:backgroundTint="@color/burgundy"
-        android:contentDescription="@string/clock_icon"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/clock" />
 
     <TextView
         android:id="@+id/textView4"
@@ -134,39 +106,38 @@
 
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerDur"
         android:layout_width="140dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="36dp"
+        android:textAlignment="textEnd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/switchLight" />
 
     <TextView
-        android:id="@+id/startTimeTv"
-        android:text="11:59"
+        android:id="@+id/startTime"
         android:layout_width="81dp"
         android:layout_height="29dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="52dp"
         android:textAlignment="center"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startTimeBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerStartHour" />
 
     <TextView
-        android:id="@+id/endTimeTv"
-        android:text="11:69"
+        android:id="@+id/endTime"
         android:layout_width="81dp"
         android:layout_height="29dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
         android:textAlignment="center"
         android:textColor="#000000"
-        app:layout_constraintStart_toEndOf="@+id/startTimeTv"
-        app:layout_constraintTop_toBottomOf="@+id/endTimeBtn" />
+        app:layout_constraintStart_toStartOf="@+id/spinnerEndHour"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEndMin" />
 
     <Button
         android:id="@+id/confirmBtn"
@@ -178,5 +149,46 @@
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Spinner
+        android:id="@+id/spinnerStartHour"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="textEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Spinner
+        android:id="@+id/spinnerEndHour"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerEndMin"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Spinner
+        android:id="@+id/spinnerStartMin"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/spinnerStartHour"
+        app:layout_constraintTop_toTopOf="@+id/spinnerStartHour" />
+
+    <Spinner
+        android:id="@+id/spinnerEndMin"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinnerEndHour" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="524dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,6 @@
 //Andres Vargas(N01359071), Ibrahim Abdiaziz(N01394807), Zachary Symons(N01390593), Jonathan Alexandris (N01352690).
 package home.control.centurion.LightControl;
 
-import android.app.ProgressDialog;
-import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,11 +8,8 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +20,6 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -54,7 +48,7 @@ public class LightControlFrag extends Fragment
 
     private FloatingActionButton homebtn;
      DatabaseReference reff;
-     DistanceSensor distanceSensorData;
+
 
 
      @Override
@@ -64,12 +58,33 @@ public class LightControlFrag extends Fragment
 
         imageView = (ImageView) root.findViewById(R.id.imageView2);
         //Spinner initialization
-        Spinner mySpinner = (Spinner) root.findViewById(R.id.spinner);
-                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.timerArray, android.R.layout.simple_spinner_item);
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    mySpinner.setAdapter(adapter);
 
-        homebtn = root.findViewById(R.id.fab_light);
+         Spinner Dur = (Spinner) root.findViewById(R.id.spinnerDur);
+         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.timerArray, android.R.layout.simple_spinner_item);
+         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+         Dur.setAdapter(adapter);
+
+         ArrayAdapter<CharSequence> adapterHours = ArrayAdapter.createFromResource(getContext(), R.array.timeHours, android.R.layout.simple_spinner_item);
+         adapterHours.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+         ArrayAdapter<CharSequence> adapterMins = ArrayAdapter.createFromResource(getContext(), R.array.timeMinutes, android.R.layout.simple_spinner_item);
+         adapterMins.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+         Spinner startHour = (Spinner) root.findViewById(R.id.spinnerStartHour);
+         startHour.setAdapter(adapterHours);
+
+         Spinner startMin = (Spinner) root.findViewById(R.id.spinnerStartMin);
+         startMin.setAdapter(adapterMins);
+
+         Spinner endHour = (Spinner) root.findViewById(R.id.spinnerEndHour);
+         endHour.setAdapter(adapterHours);
+
+         Spinner endMin = (Spinner) root.findViewById(R.id.spinnerEndMin);
+         endMin.setAdapter(adapterMins);
+
+
+
+         homebtn = root.findViewById(R.id.fab_light);
+
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,50 +102,31 @@ public class LightControlFrag extends Fragment
         });
 
 
-        TextView startTimeTv = (TextView) root.findViewById(R.id.startTimeTv);
-        TextView endTimeTv = (TextView) root.findViewById(R.id.endTimeTv);
+        TextView startTimeTv = (TextView) root.findViewById(R.id.startTime);
+        TextView endTimeTv = (TextView) root.findViewById(R.id.endTime);
         ImageButton startTimePick = (ImageButton) root.findViewById(R.id.startTimeBtn);
         ImageButton endTimePick = (ImageButton) root.findViewById(R.id.endTimeBtn);
-        startTimePick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            //intent launch timepicker activity
-
-                Intent intent = new Intent(getContext(), TimePickerActivity.class);
-                intent.putExtra("case",0);
-                startActivity(intent);
-
-
-
-
-            }
-        });
-
-        endTimePick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), TimePickerActivity.class);
-                intent.putExtra("case",1);
-                startActivity(intent);
-            }
-        });
-
-
 
         Button confirmBtn = (Button) root.findViewById(R.id.confirmBtn);
-        distanceSensorData = new DistanceSensor();
+
         reff = FirebaseDatabase.getInstance().getReference().child("DistanceSensor");
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //get string from ui
-                String start = startTimeTv.getText().toString();
-                String end = endTimeTv.getText().toString();
+
+                String start = startHour.getSelectedItem().toString() + ":" +startMin.getSelectedItem().toString();
+                String end = endHour.getSelectedItem().toString() + ":" + endMin.getSelectedItem().toString();
+                String dur = Dur.getSelectedItem().toString();
+
+
                 //save strings to object
-                distanceSensorData.setEndTime(end);
-                distanceSensorData.setStartTime(start);
+
                 //send object to database
-                reff.child("Time").setValue(distanceSensorData);
+                reff.child("Settings").child("Active Hours").child("End").setValue(end);
+                reff.child("Settings").child("Active Hours").child("Start").setValue(start);
+                reff.child("Settings").child("Duration").setValue(dur);
+
             }
         });
 

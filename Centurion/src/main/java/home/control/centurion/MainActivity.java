@@ -2,6 +2,7 @@
 package home.control.centurion;
 
 
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -35,7 +38,7 @@ import home.control.centurion.menuItem.FeedbackFrag;
 import home.control.centurion.menuItem.SettingsFragment;
 import home.control.centurion.ui.main.MainFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
 
 
     private DrawerLayout mDrawerLayout;
@@ -189,5 +192,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+        String time = hourOfDay + ":" + minute;
+        TextView startTimeTv = (TextView) view.findViewById(R.id.startTime);
+        TextView endTimeTv = (TextView) view.findViewById(R.id.endTime);
+      //  startTimeTv.setText(time.toString());
+    }
 }

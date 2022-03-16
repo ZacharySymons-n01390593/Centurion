@@ -84,7 +84,9 @@ public class CarbonMonoxideFrag extends Fragment {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                         String reading = dataSnapshot.child("reading").getValue().toString();
-                        Output.setText(reading);
+                        String Time =  dataSnapshot.child("Time:").getValue().toString();
+                        Output.setText("Current Gas Reading:" + reading +"\n Last Gas Detection: " + Time);
+                       // Output.setText(Time);
                     }
 
                     @Override

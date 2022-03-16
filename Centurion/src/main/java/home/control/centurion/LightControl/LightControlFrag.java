@@ -74,7 +74,7 @@ public class LightControlFrag extends Fragment
         reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String lastDetected = dataSnapshot.child("Date_Time").getValue() + " " +  dataSnapshot.child("Distance").getValue();
+                String lastDetected = dataSnapshot.child("Date_Time").getValue() + " " +  dataSnapshot.child("Distance").getValue() + "cm";
                 TextView tv = root.findViewById(R.id.dateDetectedTv);
                 tv.setText(lastDetected);
             }
@@ -158,6 +158,7 @@ public class LightControlFrag extends Fragment
                 //save strings to object
 
                 //send object to database
+                reff = FirebaseDatabase.getInstance().getReference().child("DistanceSensor");
                 reff.child("Settings").child("Active Hours").child("End").setValue(end);
                 reff.child("Settings").child("Active Hours").child("Start").setValue(start);
                 reff.child("Settings").child("Duration").setValue(dur);

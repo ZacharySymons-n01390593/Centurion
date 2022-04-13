@@ -43,6 +43,10 @@ private FloatingActionButton homebtn;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("RFID");
+
         View root = inflater.inflate(R.layout.fragment_lock, container, false);
         ImageButton lockBTN = root.findViewById(R.id.lockBTN);
         //create text boxes of all data required
@@ -57,10 +61,12 @@ private FloatingActionButton homebtn;
                     lockTV.setText(R.string.unlocked);
                     lockTV.setTextColor(ContextCompat.getColor(getContext(),R.color.green));
                     lock = false;
+                    databaseReference.child("Lock State").child("state").setValue(lockTV.getText().toString());
                 } else { //if lock is currently unlocked
                     TextView lockTV = (TextView) root.findViewById(R.id.lockTV);
                     lockTV.setText(R.string.locked);
                     lockTV.setTextColor(ContextCompat.getColor(getContext(),R.color.red));
+                    databaseReference.child("Lock State").child("state").setValue(lockTV.getText().toString());
                     lock = true;
                 }
             }
@@ -77,16 +83,14 @@ private FloatingActionButton homebtn;
 
 
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("RFID");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     //receive data from database
-                String reading = dataSnapshot.child("1-set").child("Access").getValue().toString();
-                String reading2 = dataSnapshot.child("1-set").child("CardID").getValue().toString();
-                String reading3 = dataSnapshot.child("1-set").child("User").getValue().toString();
+                String reading = dataSnapshot.child("Latest Scan").child("Access").getValue().toString();
+                String reading2 = dataSnapshot.child("Latest Scan").child("CardID").getValue().toString();
+                String reading3 = dataSnapshot.child("Latest Scan").child("User").getValue().toString();
                     //update text fields for user.
                 output.setText(reading);
                 output2.setText(reading2);

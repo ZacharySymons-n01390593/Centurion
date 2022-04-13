@@ -70,7 +70,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 //receive data from database
-                String reading = dataSnapshot.child("1-set").child("User").getValue().toString();
+                String reading = dataSnapshot.child("Latest Scan").child("User").getValue().toString();
                 //update text fields for user.
                 output.setText(reading);
             }

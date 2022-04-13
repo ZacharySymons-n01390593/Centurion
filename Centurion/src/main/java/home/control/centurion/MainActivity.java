@@ -195,8 +195,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         String time = hourOfDay + ":" + minute;
-        TextView startTimeTv = (TextView) view.findViewById(R.id.startTime);
-        TextView endTimeTv = (TextView) view.findViewById(R.id.endTime);
+
       //  startTimeTv.setText(time.toString());
     }
 }

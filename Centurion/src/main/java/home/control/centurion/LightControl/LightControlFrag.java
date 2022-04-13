@@ -53,9 +53,10 @@ public class LightControlFrag extends Fragment
     ImageView imageView = null;
     String strURL;
     Switch switchOn_Off = null;
+    DatabaseReference reff;
 
     private FloatingActionButton homebtn;
-     DatabaseReference reff;
+
 
 
     RadioGroup radioGroup1;
@@ -92,22 +93,7 @@ public class LightControlFrag extends Fragment
          adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
          Dur.setAdapter(adapter);
 
-         ArrayAdapter<CharSequence> adapterHours = ArrayAdapter.createFromResource(getContext(), R.array.timeHours, android.R.layout.simple_spinner_item);
-         adapterHours.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-         ArrayAdapter<CharSequence> adapterMins = ArrayAdapter.createFromResource(getContext(), R.array.timeMinutes, android.R.layout.simple_spinner_item);
-         adapterMins.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-         Spinner startHour = (Spinner) root.findViewById(R.id.spinnerStartHour);
-         startHour.setAdapter(adapterHours);
-
-         Spinner startMin = (Spinner) root.findViewById(R.id.spinnerStartMin);
-         startMin.setAdapter(adapterMins);
-
-         Spinner endHour = (Spinner) root.findViewById(R.id.spinnerEndHour);
-         endHour.setAdapter(adapterHours);
-
-         Spinner endMin = (Spinner) root.findViewById(R.id.spinnerEndMin);
-         endMin.setAdapter(adapterMins);
 
          homebtn = root.findViewById(R.id.fab_light);
 
@@ -127,10 +113,8 @@ public class LightControlFrag extends Fragment
             }
         });
 
-        TextView startTimeTv = (TextView) root.findViewById(R.id.startTime);
-        TextView endTimeTv = (TextView) root.findViewById(R.id.endTime);
-        ImageButton startTimePick = (ImageButton) root.findViewById(R.id.startTimeBtn);
-        ImageButton endTimePick = (ImageButton) root.findViewById(R.id.endTimeBtn);
+
+
 
         Button confirmBtn = (Button) root.findViewById(R.id.confirmBtn);
 
@@ -139,29 +123,14 @@ public class LightControlFrag extends Fragment
             @Override
             public void onClick(View v) {
                 //get string from ui
-                radioGroup1 = root.findViewById(R.id.start_am_pm);
-                radioGroup2 = root.findViewById(R.id.end_am_pm);
-
-                int radioId1 = radioGroup1.getCheckedRadioButtonId();
-                int radioId2 = radioGroup2.getCheckedRadioButtonId();
-
-                radioButton1 =  root.findViewById(radioId1);
-                radioButton2 =  root.findViewById(radioId2);
-
-                String start = startHour.getSelectedItem().toString() + ":" +startMin.getSelectedItem().toString() + " " + radioButton1.getText();
-                String end = endHour.getSelectedItem().toString() + ":" + endMin.getSelectedItem().toString() + " " + radioButton2.getText();
-                startTimeTv.setText(start);
-                endTimeTv.setText(end);
                 String dur = Dur.getSelectedItem().toString();
 
 
-                //save strings to object
-
-                //send object to database
+                //send values to database
+                DatabaseReference reff;
                 reff = FirebaseDatabase.getInstance().getReference().child("DistanceSensor");
-                reff.child("Settings").child("Active Hours").child("End").setValue(end);
-                reff.child("Settings").child("Active Hours").child("Start").setValue(start);
                 reff.child("Settings").child("Duration").setValue(dur);
+                reff.child("Settings").child("SensorActive").setValue(switchOn_Off.isChecked());
 
             }
         });

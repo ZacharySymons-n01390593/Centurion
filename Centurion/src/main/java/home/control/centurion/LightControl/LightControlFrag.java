@@ -123,13 +123,29 @@ public class LightControlFrag extends Fragment
             @Override
             public void onClick(View v) {
                 //get string from ui
-                String dur = Dur.getSelectedItem().toString();
-
-
-                //send values to database
                 DatabaseReference reff;
                 reff = FirebaseDatabase.getInstance().getReference().child("DistanceSensor");
-                reff.child("Settings").child("Duration").setValue(dur);
+               String dur =  Dur.getSelectedItem().toString();
+                if (dur.equals("15")) {
+                int num = Integer.parseInt(dur);
+                    reff.child("Settings").child("Duration").setValue(num);
+                }
+               else if (dur.equals("30")){
+                    int num = Integer.parseInt(dur);
+                    reff.child("Settings").child("Duration").setValue(num);
+                }
+                else if (dur.equals("45")){
+                    int num = Integer.parseInt(dur);
+                    reff.child("Settings").child("Duration").setValue(num);
+                }
+                else if (dur.equals("60")){
+                    int num = Integer.parseInt(dur);
+                    reff.child("Settings").child("Duration").setValue(num);
+                }
+                //send values to database
+
+
+
                 reff.child("Settings").child("SensorActive").setValue(switchOn_Off.isChecked());
 
             }

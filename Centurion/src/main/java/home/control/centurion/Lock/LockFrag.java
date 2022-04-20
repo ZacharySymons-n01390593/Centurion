@@ -61,12 +61,12 @@ private FloatingActionButton homebtn;
                     lockTV.setText(R.string.unlocked);
                     lockTV.setTextColor(ContextCompat.getColor(getContext(),R.color.green));
                     lock = false;
-                    databaseReference.child("Lock State").child("state").setValue(lockTV.getText().toString());
+                    databaseReference.child("Lock State").child("state").setValue(true);
                 } else { //if lock is currently unlocked
                     TextView lockTV = (TextView) root.findViewById(R.id.lockTV);
                     lockTV.setText(R.string.locked);
                     lockTV.setTextColor(ContextCompat.getColor(getContext(),R.color.red));
-                    databaseReference.child("Lock State").child("state").setValue(lockTV.getText().toString());
+                    databaseReference.child("Lock State").child("state").setValue(false);
                     lock = true;
                 }
             }
